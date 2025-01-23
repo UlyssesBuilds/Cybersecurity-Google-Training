@@ -1,0 +1,81 @@
+Intro:
+
+eight security domains. 
+common security frameworks and controls. 
+tools and programming languages that entry-level security analysts may use
+
+Study group: https://lu.ma/GoogleCareerCertificatesStudyGroup?utm_source=course
+Cyber Community: https://www.coursera.support/s/google-cybersecurity-community
+
+Beginner roles:
+1) Security analyst: monitor and protect IS
+- protecting computer by monitoring
+- instal prevention software
+- conducting security audits
+
+2) security Enginge
+- operations: respoinding to detections and doing investigations
+- Projects: teams to build new detections and improve existing ones
+
+---
+key terms:
+- Compliance is the process of adhering to internal standards and external regulations and enables organizations to avoid fines and security breaches.
+- Security frameworks are guidelines used for building plans to help mitigate risks and threats to data and privacy. A checklist
+- Security controls are safeguards designed to reduce specific security risks. They are used with security frameworks to establish a strong security posture.
+- Security posture is an organization’s ability to manage its defense of critical assets and data and react to change. 
+- A threat actor, or malicious attacker, is any person or group who presents a security risk. This risk can relate to computers, applications, networks, and data.
+- An internal threat can be a current or former employee, an external vendor, or a trusted partner who poses a security risk. At times, an internal threat is accidental. 
+- Network security is the practice of keeping an organization's network infrastructure secure from unauthorized access. CIA
+- Cloud security is the process of ensuring that assets stored in the cloud are properly configured, or set up correctly, and access to those assets is limited to authorized users..
+
+PII: personally identifiable information
+SPII: sensitive PII
+
+
+analyst technical skills:
+programming language
+Security information and event mangament (SIEM)
+Computer Forensics
+
+
+---
+Module 2:
+
+History
+Morris worm: lead to the establishment of security incident response
+Equifax: lack of judiciary duty led to signiciant financial consequences of breaches became aparent
+
+Terms:
+Viruses: program that modifies other computer programs by inserting its own code to damage and/or destroy data
+Malware: software designed to harm devices / network
+worm: self replicates and spreads across a network
+randomeware: encryption of data to demand for payment to restore access
+spyware: software spying on and stealing user data without permission 
+usb baiting: hreat actor strategically leaves a malware USB stick for an employee to find and unknowingly infect a network
+
+phising: tricking people to reveal sensitive data or deploy malicious software through digital communicate
+vishing: phising via voice communicatication
+BEC (business email compromise): threat actor impersonates a known source to obtain a financial advantage
+Spear phising: targeted physing to appear that it is fromn a trusted source
+social media phising: collecting detailed information about their target on social media
+whaling: subset of spear phising where executives are targeted
+water holing attack: threat actor compromises a website frequently visited by a specific group of users
+
+Social engineering: expliot human error to gain unauthroized access
+Physical social engineering: threat actor gains unauthorized access to physical location via impersonation
+
+
+Steps
+1) contain the breach
+2) investigate the breach
+
+
+Eight CISSP secuirty domains
+1. Security & risk managment
+2. Asset security
+3. Security architecture and engineering
+4. Communications and network Security
+5. Identity and Access Managament
+6. Secyruty Assesment and Testing
+7. Security Operation
+8. Software Development Security
