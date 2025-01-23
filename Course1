@@ -79,3 +79,71 @@ Eight CISSP secuirty domains
 6. Security Assesment and Testing: conducting testing and audit to find risk, threat, and vulnerability 
 7. Security Operation: conductive investigation and implmenting preventitive measures
 8. Software Development Security: use secure coding practices
+
+---
+module 3: policy and procedures
+
+Security frameworks and controls
+Ethics of security
+
+Security frameworks and controls:
+Identifying critial assets to understand which alerts are serious
+Purpose: Protecting PII, securing financial information, identifying sedcurity weakness, managing organization risk
+
+Four components: 
+1) Identifying a document security goal
+- GDPR align with EU's General Data protection regulation (eu citizens have more control of their data)
+2) setting guidelines to achieve goals
+- do we need to set up new policies?
+3) implementing strong security process
+4) monitor and communicate results
+
+CIA
+Confidentiality: no unauthorized access
+Integrity: no unathorized changes
+Availability: ensuring its available
+
+NIST CSF (cybsercuirty framework)
+voluntary guideline for organizations to improve cybersecurity practices for  long + short term risk mitigation
+Identify, Protect, Detect, Respond, Recover, Govern
+
+
+Ethics of security:
+Adhere to protocols no matter what
+confidentiality: don't expose PII 
+privacy: safeguarding personal information
+law: avoid negligence and shortcut
+
+Deploying a counterattack on a threat actor is illegal as it might scalate to internatinoal implicaiton
+you can only defemds
+
+The International Court of Justice (ICJ), which updates its guidance regularly, states that a person or group can counterattack if: 
+The counterattack will only affect the party that attacked first.
+The counterattack is a direct communication asking the initial attacker to stop.
+The counterattack does not escalate the situation.
+The counterattack effects can be reversed.
+
+---
+Module 4: tools to mitigate risk
+Log: record of events within org system can identify
+
+SIEM tools: collects and alalyze log data for critical activities in real time
+- Splunk: self hosted tool
+- Google's chronicle: cloud native
+> dashboard to identify potential incidence and tell a story
+playbooks: manual on how to respond
+- chain of custody & protecting and how to protect and preserve evidence
+network protocl analyzer (packet sniffer): capture and analyze data
+- TCPDump
+- Wireshark
+linux OS
+- open source OS, relying on CLI
+programming language (SQL, python)
+- automate with python
+- SQL to filter data
+
+Web vulnerabilities mitigation
+- Antivirus software
+- Intrusion Detection System
+- Encryption
+- Pen testing
