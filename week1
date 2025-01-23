@@ -1,4 +1,4 @@
-ingIntro:
+iingIntro:
 
 eight security domains. 
 common security frameworks and controls. 
@@ -76,6 +76,6 @@ Eight CISSP secuirty domains
 3. Security architecture and engineering: optimize data security by having tools are in place  
 4. Communications and network Security: manging and securing physical networks
 5. Identity and Access Managament: validating identify and creating access roles
-6. Secyruty Assesment and Testing: conducting testing and audit to find risk, threat, and vulnerability 
+6. Security Assesment and Testing: conducting testing and audit to find risk, threat, and vulnerability 
 7. Security Operation: conductive investigation and implmenting preventitive measures
 8. Software Development Security: use secure coding practices
