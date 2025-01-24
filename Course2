@@ -1,2 +1,79 @@
 Manage Security Risks
 Identify how cybersecurity professionals use frameworks and controls to protect business operations, and explore common cybersecurity tools.
+
+
+Security posture: An organization’s ability to manage its defense of critical assets and data and react to change
+
+Eight CISSP secuirty domains
+1. Security & risk managment / information Security (InfoSec): defining security goals based off risk mitigation and law
+2. Asset security: foucsing on securing digital and physical asset and safe destroyal of asset
+3. Security architecture and engineering: optimize data security by having tools are in place  
+- threat modeling, least privledges, defense in depth, fail securely, seperation of duties, keep it simple, zero trust
+- shared responsibility
+4. Communications and network Security: manging and securing physical networks
+5. Identity and Access Managament: validating identify and creating access roles; only those who need it get it
+6. Security Assesment and Testing: determine whether their internal systems are secure or at risk. 
+- security audits
+- pen tester
+7. Security Operation: conductive investigation and implmenting preventitive measures
+- might need to implment new control like MFA
+- Computer forensic of what, why, and a breach happened 
+8. Software Development Security: use secure coding practices
+
+
+Security posture
+
+1) Security & risk managment: defining security goals based off risk mitigation and law
+Risk mitigation: Having the right procedures and rules in place to reduce impact of risk 
+Business continuity: maintain everday productivity via disaster recovery plans
+
+IAM
+identification: username or access card
+Authentication: prove you are that user
+Authorization: what level of access do they have?
+Accountability: monitor
+
+surface web
+deep web: require authorization (organization's websites)
+dark web: accessed by special software
+
+Threat: Any circumstance or event that can negatively impact assets
+Vulnerability: a weakness that can be exploited by a threat
+- firewall needing update, weak password, people
+> vulnerability + threat = risk
+
+Risk: anything that can impact the confidentiality, integrity, or availability of an asset
+
+low risk: would not harm organization reputation or ongoing opertons & would not harm financial data
+medium risk: information not available to the public and may cause damage to organization's finance, reputation or ongoing operations
+high risk: information protected with laws. compromised will damage company
+
+ransomeware: threat actors encrypt access and demand payment to return
+
+financial: stop business, fixing hack, fines
+identity theft: where and how long do we store sensitive data
+reputation
+
+Acceptance: Accepting a risk to avoid disrupting business continuity
+Avoidance: Creating a plan to avoid the risk altogether
+Transference: Transferring risk to a third party to manage
+Mitigation: Lessening the impact of a known risk
+
+misconfiguration
+outdated systems
+
+
+NIST RMF (risk manamgnet framework):
+1 prepare: 
+2 categorize: devlop risk managment task
+3 select: keeping playbook up to date
+4 implement: security plans
+5 Assess: if security plans are efficient
+6 authorize: being accountable for risk
+7 monitor: aware how systems are operating
+
+---
+Module 2
+
+Security frameworks: address security risk, threats, vulnerabilities
+Controls: reduce specific risk
