@@ -1,8 +1,9 @@
 Manage Security Risks
-Identify how cybersecurity professionals use frameworks and controls to protect business operations, and explore common cybersecurity tools.
+Understand how cybersecurity professionals use frameworks and controls to protect business operations. Explore common cybersecurity tools.  
 
+Security posture:  
+An organization’s ability to manage its defense of critical assets and data and react to changes.  
 
-Security posture: An organization’s ability to manage its defense of critical assets and data and react to change
 
 Eight CISSP secuirty domains
 1. Security & risk managment / information Security (InfoSec): defining security goals based off risk mitigation and law
@@ -21,49 +22,50 @@ Eight CISSP secuirty domains
 8. Software Development Security: use secure coding practices
 
 
-Security posture
-
-1) Security & risk managment: defining security goals based off risk mitigation and law
+CISSP Domain One: Security & risk managment
+Defining security goals based off risk mitigation and law
 Risk mitigation: Having the right procedures and rules in place to reduce impact of risk 
 Business continuity: maintain everday productivity via disaster recovery plans
 
-IAM
+CISSP Domain Five: IAM
 identification: username or access card
 Authentication: prove you are that user
 Authorization: what level of access do they have?
 Accountability: monitor
 
-surface web
-deep web: require authorization (organization's websites)
-dark web: accessed by special software
 
-Threat: Any circumstance or event that can negatively impact assets
-Vulnerability: a weakness that can be exploited by a threat
-- firewall needing update, weak password, people
-> vulnerability + threat = risk
+Threats, Vulnerabilities, and Risks:  
+- Threat: Any event or circumstance that negatively impacts assets.  
+- Vulnerability: A weakness that can be exploited (e.g., outdated firewalls, weak passwords).  
+- Risk: The combination of vulnerabilities and threats, affecting:  
+  - Confidentiality: Ensuring sensitive data is protected.  
+  - Integrity: Preventing unauthorized data modifications.  
+  - Availability: Ensuring access to resources when needed. 
 
-Risk: anything that can impact the confidentiality, integrity, or availability of an asset
+Risk Levels:  
+- Low: Minimal harm to reputation, operations, or finances.  
+- Medium: Potential harm to finances, operations, or reputation.  
+- High: Severe consequences, such as legal violations or critical data breaches.  
 
-low risk: would not harm organization reputation or ongoing opertons & would not harm financial data
-medium risk: information not available to the public and may cause damage to organization's finance, reputation or ongoing operations
-high risk: information protected with laws. compromised will damage company
+Risk Management Strategies:  
+- Acceptance: Acknowledging risk to maintain business continuity.  
+- Avoidance: Developing plans to eliminate risks.  
+- Transference: Shifting risk to a third party.  
+- Mitigation: Reducing the risk's impact through proactive measures.  
+
+Otherwise we might face financial impact: business operations stopped, fixing hack, fines
+We need to start thinking about identity theft: where and how long do we store sensitive data
+To ensure of reputation
+
 
 ransomeware: threat actors encrypt access and demand payment to return
 
-financial: stop business, fixing hack, fines
-identity theft: where and how long do we store sensitive data
-reputation
-
-Acceptance: Accepting a risk to avoid disrupting business continuity
-Avoidance: Creating a plan to avoid the risk altogether
-Transference: Transferring risk to a third party to manage
-Mitigation: Lessening the impact of a known risk
-
+Common Risk Factors:  
 misconfiguration
 outdated systems
 
 
-NIST RMF (risk manamgnet framework):
+NIST RMF (risk Managment framework):
 1 prepare: 
 2 categorize: devlop risk managment task
 3 select: keeping playbook up to date
@@ -77,3 +79,161 @@ Module 2
 
 Security frameworks: address security risk, threats, vulnerabilities
 Controls: reduce specific risk
+
+
+Security Frameworks and Controls:  
+Frameworks help address security risks, threats, and vulnerabilities.  
+- RMF (Risk Management Framework): Guides risk assessment and response.  
+- CSF (Cybersecurity Framework): Outlines strategies to manage cyber risks.  
+- CTF (Cyber Threat Framework): Provides a common language for describing threats.  
+- CIA (Confidentiality, Integrity, Availability): Ensures data protection.  
+- HIPAA: Protects sensitive health data.  
+
+Controls are measures to reduce risks:  
+- Physical: Securing physical resources (e.g., locks, surveillance).  
+- Technical: Implementing tools like encryption, authentication, and biometrics.  
+  - Examples of authentication methods:  
+    - Something you know (passwords, PINs).  
+    - Something you have (tokens, access cards).  
+    - Something you are (biometrics like fingerprints, facial recognition).  
+  - Authorization ensures users access only what they need.  
+- Administrative: Policies and procedures to govern risk management.  
+
+NIST Risk Management Framework (RMF):  
+1. Prepare: Establish context and identify risks.  
+2. Categorize: Define risk management tasks.  
+3. Select: Update the playbook for evolving risks.  
+4. Implement: Apply and monitor security plans.  
+5. Assess: Measure the effectiveness of security controls.  
+6. Authorize: Take responsibility for risk management.  
+7. Monitor: Continuously review and update security practices.  
+
+
+Type of Controls:
+Physical
+Technical
+Administrative
+
+- encryption for confidentiality of data
+- authentication: access to websites based off who you are (what you know, what you have)
+  Something you know (passwords, PINs).
+  Something you have (security tokens, access cards).
+  Something you are (biometrics) – fingerprints, facial recognition, retina scans, or voice patterns come into play.
+[Vising mimics your voice with an electronic voice]
+-  Auhtorization: granting specific access 
+  you should access to only what you need
+
+
+Web Access Tiers:  
+- Surface web: Publicly accessible content.  
+- Deep web: Requires authorization (e.g., organizational intranets).  
+- Dark web: Accessed via specialized software for anonymous activity. 
+
+---
+CIA: Security model ensuring data protection for settng up security policy and systems 
+- Confidentiality: Ensuring only authorized users can access data (Need to know basis)
+- Integrity: correct, authentic, reliable data
+- Availability: Those who are authorized to access it
+
+---
+CSF (Cybersecurity Framework): Outlines strategies to manage cyber risks.
+Use Case: High-Risk Notification for a Compromised Workstation
+
+Identify: Locate the compromised workstation and detect the unknown device connected to it.
+Protect: Safeguard the organization by blocking the device and isolating the infected workstation to prevent further spread.
+Detect: Monitor for additional suspicious behavior from the threat actor.
+Respond: Investigate the incident to determine who or what caused the compromise.
+Recover: Restore any files or data affected by the breach.
+---
+OWASP (Open web applications security project)
+https://owasp.org/www-project-mobile-top-10/2016-risks/
+
+- Minimize Attack Surface Area
+Reduce potential external vulnerabilities that threat actors could exploit.
+
+- Principle of Least Privilege
+Grant users only the access necessary for their tasks, limiting internal vulnerabilities.
+
+- Defense in Depth
+Use multiple security controls (e.g., MFA, intrusion detection) to address risks in various ways.
+
+- Separation of Duties
+Ensure critical tasks are performed by multiple individuals to prevent misuse.
+
+- Keep Security Simple
+Avoid unnecessary complexity; simpler security fosters manageability and collaboration.
+
+- Fix Security Issues Correctly
+Identify root causes of incidents, contain impact, and verify fixes through testing.
+
+- Establish Secure Defaults
+The default state of an application should be its most secure configuration, making it harder to make it insecure.
+
+- Fail Securely
+When a security control fails, it should default to the most secure option. For example, a failing firewall should block all connections rather than accepting all.
+
+- Don’t Trust Services
+Organizations should not implicitly trust third-party services. For example, verify external systems before sharing sensitive data.
+
+- Avoid Security by Obscurity
+Key systems' security should not depend on keeping details hidden
+---
+Security Audit
+Evaluate how frameworks, controls, security principles, and compliance regulations work together to safeguard an organization. 
+
+The audit seeks to answer several key questions:
+What is the audit meant to achieve?
+Which assets are most at risk?
+Are current controls sufficient to protect these assets?
+What additional controls or compliance regulations need to be implemented?
+
+Factors Influencing Audit Types:
+Industry type
+Organization size
+Government regulations
+Business geographical location
+Decision to adhere to specific regulatory compliance
+
+
+- Establishing Scope and Goals:
+Scope: Identify individuals, assets, policies, procedures, and technologies that impact security posture
+Goals: Define what the audit aims to achieve in terms of improving security
+
+- Conducting Risk Assessment:
+Identify potential threats, risks, and vulnerabilities
+
+- Complete Controls Assessment:
+Classify controls (administrative, technical, physical)
+Evaluate if the organization adheres to laws and regulations
+
+- Assessing Compliance:
+Ensure the organization complies with applicable laws and regulations
+
+- Communicating Results to Stakeholders:
+Summarize scope and goals of the audit
+List identified risks
+Describe how risks need to be addressed
+Identify relevant laws for compliance
+Provide recommendations for improving security posture
+
+Assesing audit resources
+https://www.nist.gov/cyberframework/assessment-auditing-resources
+
+IT Disaster Recovery Plan
+https://www.ready.gov/business/emergency-plans/recovery-plan
+
+control categories
+https://docs.google.com/document/d/1Ut_H5A9FHwuQEy6_qG6Lfy3zwF6GSJnj3DZTMaNRWEE/template/preview?resourcekey=0-i4dR5qZFqQyfzr8uk3OOmA
+
+
+
+
+
+
+
+
+
+
+
+
+
