@@ -138,12 +138,32 @@ CIA: Security model ensuring data protection for settng up security policy and s
 ---
 CSF (Cybersecurity Framework): Outlines strategies to manage cyber risks.
 Use Case: High-Risk Notification for a Compromised Workstation
-
 Identify: Locate the compromised workstation and detect the unknown device connected to it.
 Protect: Safeguard the organization by blocking the device and isolating the infected workstation to prevent further spread.
 Detect: Monitor for additional suspicious behavior from the threat actor.
 Respond: Investigate the incident to determine who or what caused the compromise.
 Recover: Restore any files or data affected by the breach.
+
+
+1. Identify
+Manage assets and understand organizational risk.
+Understand the organization’s business environment and critical functions.
+Establish governance structures for cybersecurity alignment with business goals.
+Conduct risk assessments and develop risk management strategies.
+2. Protect
+Implement access control and protect data.
+Ensure users receive training and awareness of cybersecurity responsibilities.
+Develop and implement information protection processes and procedures.
+Maintain systems regularly and use technology to safeguard data and assets.
+3. Detect
+Continuously monitor systems for anomalies and events.
+Analyze detected anomalies and incidents for a timely response.
+4. Respond
+Develop incident response plans and communicate effectively during incidents.
+Analyze, mitigate, and improve response strategies to reduce impact.
+5. Recover
+Develop recovery plans to restore systems after an incident.
+Evaluate and improve recovery processes and communication post-incident.
 ---
 OWASP (Open web applications security project)
 https://owasp.org/www-project-mobile-top-10/2016-risks/
