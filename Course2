@@ -137,14 +137,6 @@ CIA: Security model ensuring data protection for settng up security policy and s
 
 ---
 CSF (Cybersecurity Framework): Outlines strategies to manage cyber risks.
-Use Case: High-Risk Notification for a Compromised Workstation
-Identify: Locate the compromised workstation and detect the unknown device connected to it.
-Protect: Safeguard the organization by blocking the device and isolating the infected workstation to prevent further spread.
-Detect: Monitor for additional suspicious behavior from the threat actor.
-Respond: Investigate the incident to determine who or what caused the compromise.
-Recover: Restore any files or data affected by the breach.
-
-
 1. Identify
 Manage assets and understand organizational risk.
 Understand the organization’s business environment and critical functions.
@@ -244,6 +236,103 @@ https://www.ready.gov/business/emergency-plans/recovery-plan
 
 control categories
 https://docs.google.com/document/d/1Ut_H5A9FHwuQEy6_qG6Lfy3zwF6GSJnj3DZTMaNRWEE/template/preview?resourcekey=0-i4dR5qZFqQyfzr8uk3OOmA
+
+
+Asset: An item perceived as having value to an organization
+Attack vectors: The pathways attackers use to penetrate security defenses
+
+---
+Module 3: Security tools
+Logs & SIEM
+
+Log: record of events that occur with organization's system
+Firewall logs: attempted or established connections and outbound request
+Network logs: all computer devices that enter and leave the network and connections between devices
+Server logs: record of events related to service (logins, passwords and username request)
+
+SIEM tool: configured and customized for each business
+Collects and analyzes log data from various sources, Providing real-time alerts
+Centralizes log data for easy access and management.
+Creates dashboards that visualize patterns and trends, enabling data-driven decision-making
+  Provides metrics to assess overall security performance to evaluates software applications on:
+    Response time
+    Availability
+    Failure rate
+
+Differnt types of SIEM tools:
+Self hosted: when needing condfidential data
+Cloud hosted
+Hybrid
+
+Proprietary SIEM Solutions
+Splunk Solutions
+Splunk Enterprise (Self-hosted)
+
+On-premises solution for log management and security analytics.
+Splunk Cloud
+
+Cloud-based version for easy deployment and scalability.
+
+Key Dashboards and Features
+- Security Posture Dashboard
+Provides a 24-hour summary for Security Operation Centers (SOC).
+- Executive Summary Dashboard
+Displays an overview of the organization's overall security health.
+- Incident Review
+Displays a timeline of events leading up to a security incident for in-depth analysis.
+- Risk Analysis
+Identifies risks for each object and tracks changes in activity or behavior.
+
+
+Open-Source Tools
+Linux OS
+open-source OS for flexibility and customization. 
+Open source meant less likely issues will occur as many people vet and use them
+
+Suricata Software
+Open-source network security monitoring tool used to detect and respond to network threats.
+
+Security Orchestration, Automation, and Response (SOAR)
+A collection of tools and workflows designed to automate security responses to events.
+Increases efficiency and consistency in security operations by streamlining processes and reducing manual intervention.
+
+
+-----
+Module 4: Incidenct response playbooks
+
+
+Playbooks are ever evolving manuals that provide details about any operational action, 
+clarify what tools should be used, and ensure people follow a consistent list of actions to address security incidents.
+
+Incidence response playbook cybersecurity specific
+Preparation: Before incidents occur, mitigate potential impacts on the organization by documenting, establishing staffing plans, and educating users.
+Detection and Analysis: Detect and analyze events by implementing defined processes and appropriate technology
+Containment: Prevent further damage and reduce immediate impact of incidents
+Eradication and recovery: Completely remove artifacts of the incident so that an organization can return to normal operations.
+Post incidence activity: Document the incident, inform organizational leadership, and apply lessons learned.
+coordination: Report incidents and share information throughout the response process, based on established standards
+
+
+comon use cases
+open attacks
+privacy indidents
+data leaks
+denial of service
+service alerts
+
+
+SIEM + incidence response playbook
+playboooks are a processes to response
+SIEM 
+
+
+You’re monitoring a SIEM dashboard and receive an alert about a suspicious file download. What’s the first thing you should do?
+> Asses the alert by gathering more information
+
+
+
+
+
 
 
 
