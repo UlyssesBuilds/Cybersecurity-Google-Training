@@ -413,5 +413,90 @@ Locate unauthorized instant messaging (IM), traffic, or wireless access points.
 botnet is a collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder."
 
 
+--- 
+' Malicious Packet Sniffing
+   ' Packet Structure:
+        ' - Header: Information about where the packet is from (source).
+        ' - Body: Contains potentially valuable data (e.g., login credentials, sensitive information).
+        ' - Footer: Usually includes error checking or control information.
+
+    ' Sniffing Methods:
+        ' 1. Passive Packet Sniffing
+            ' - Attacker simply reads data packets in transit without interfering with them.
+            ' - Data is captured as it passes through the network.
+
+        ' 2. Active Packet Sniffing
+            ' - Attacker actively changes data packets in transit.
+            ' - Methods include:
+                ' - Injecting malicious internet protocols to redirect traffic to unintended ports.
+                ' - Altering information inside the packet (e.g., changing a destination address).
+
+' Protection Against Packet Sniffing
+    ' VPN (Virtual Private Network):
+        ' - Encrypts data before transmission, making it unreadable to anyone intercepting the packets.
+        	Even if a hacker intercepts the packets, they cannot read the encrypted data.
+
+    ' HTTPS (Hypertext Transfer Protocol Secure):
+        ' - Utilizes SSL/TLS encryption to secure data transmitted over the internet.
+        	Encrypts both the request and the response, ensuring privacy and integrity of data.
+
+    ' Avoid Unprotected Wi-Fi:
+        ' - Public or unsecured Wi-Fi networks are vulnerable to packet sniffing.
+        ' - Always use encrypted connections or VPN when using public Wi-Fi.
+
+---
+IP spoofing
+Netowrk attack. Attacker changes the source IP of a data packet to impersonate
+an authorized system and gain access to a network
+
+- On path attack: Attacker places themselves in the middle of an authrized connection and intercept
+or alters the data in transit.
+After having put themselves in the middle and learning an IP and MAC address they can impersonate themselves
+
+- replay: Malicious actor intercepts a data packet in transit and delays it or repats it another time
+Repeating it at a different time to impersonate an authorized user
+
+- smurf (= IP spoofing attack + DDoS attack). Attacker sniffs an authorized user's IP address and floods it with packets
+This brings down a network by bypasses firewalls
+
+
+
+Firewalls can be confgiured to combat IP spoofing
+If there is a private IP address from the local network that is comeing from the internet it will deny the tranmission
+This is all the devices with that IP tranmsissions should already be on the local network  
+> Reject all incoming traffic that has the same IP address as the local network
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
