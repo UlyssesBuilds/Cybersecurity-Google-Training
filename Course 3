@@ -1,0 +1,31 @@
+Course 3 Networks and Networks Security
+Gain an understanding of network-level vulnerabilities and how to secure networks.
+
+Strcuture of a network
+Standard network tools
+cloud network
+TCP/IP
+
+Network: group of connected devices
+  wireless
+  wired
+IP protocol ensures the devices connect to the right device
+
+CLI intereact with various level of OS
+low level: memory / kernel
+high level: application
+
+log parsing: Help figure out and debug by finding the root issue
+Network traffic analysis: why is internet slow, not routed appropriately, ensure network is up and runnung
+
+Servers: provide information and services for devices
+hub: constant broadcast what is happening in the network (insecure and traffic congestion)
+Switch: direct broadcast between devices on a network (controls flow of traffic and security)
+Router: connects multiple networks together by talking to other routers (floor to floor)
+Firewall: monitors traffic and restricts incoming and outgoing network traffic (sits between internal network and untrusted outside network)
+Modem: connects router to the internret 
+
+> virtualization tools can carry out these same task for cost savings and scaleability 
+
+Cloud networks:
+using remote servers than local devices
