@@ -28,4 +28,390 @@ Modem: connects router to the internret
 > virtualization tools can carry out these same task for cost savings and scaleability 
 
 Cloud networks:
-using remote servers than local devices
+Reliability
+Cost
+Scalability
+
+CSP (cloud service provider)
+Iaas (Infrastructure as a service)
+Paas (Platform as a service):
+Saas (Software as a service): 
+
+IaaS: Provides physical components of an IT system that support computing and storage
+  Servers: Physical machines that process and store data.
+  Networking Equipment: Routers, switches, and cables to connect systems.
+  Storage Devices: Hard drives, SSDs, and storage arrays.
+  Data Centers: Facilities housing the above hardware.
+> You handle everything else (software infrastructure)
+	OS: windows, Linux, macOS
+	Middleware: Software that enable communication between apps (API)
+	Database: tools to store, manage and retrieve data (mySQL)
+
+Example: Renting virtual machines on AWS to host an application.
+Key Point: Complete control over software but you are responsible for updates, security, and configuration.
+
+
+Platform as a service (PaaS)
+A pre-configured platform that provides the software infrastructure needed to develop, run, and manage applications.
+	The provider handles hardware, OS,, middleware and developer tools.
+> You focus on creating and managing your applicatiot without worrying about maintaining the underlying systems.
+	You don't have direct control of the data, people, or infrastructure
+	Trained security professionals are watching your stuff
+
+Example: Square space
+
+
+Software as a service (SaaS)
+- Fully managed software and applications that are ready for end-users.
+- Requires no installation, updates, or infrastructure setup.
+Examples: Gmail, Microsoft 365.
+	Give username and password and now an entire email system is available to you
+	Email, spreadsheets all managed by Microsoft
+Key Point: Plug-and-play services requiring no technical expertise.
+	You get a service, you cannot code your service
+
+data packet: basic unit of information that travels acrsoss devices in a network
+Where its going, where its from , and the content of the message
+
+Header: what to do with the data packet
+Body: message that needs to be transmitted
+Footer: signals end of the packet 
+
+Bandwidth: measures network performance
+- amount of data a device receieves every second
+SppedL rate of packets are recieved or downloaded
+
+packet sniffing captures and inspect data packets
+- irregularities in speed or bandwith may indicate an attack
+
+TCP/IP
+TCP: Ensures the data you send arrives complete and in order (focuses on reliability)
+IP: Ensures the data is routed to the correct device (focuses on addressing and routing)
+Port: software based locatino to organize sending and receiving data between devices on a network
+
+UDP: user datagram protocol
+
+simplified 4 layer TCP/IP strcuture 
+(Combines the Data Link and Physical layers into a single Network Access Layer for simplicity.)
+4. Application Layer:
+Handles data exchange between applications (e.g., HTTP, DNS, FTP).
+3. Transport Layer:
+Manages data delivery reliability (e.g., TCP, UDP).
+- flow of traffic, error control, and status of connection 
+2. Internet Layer:
+Handles addressing and routing (e.g., IP, ICMP).
+- how networks connect to each other
+1. Network Access Layer: Deals with hardware and physical transmission (e.g., Ethernet, Wi-Fi).
+- transmission of data packets
+
+---
+Public IP provided by ISP to connect to the world
+Private IP provided by router to communicate in a LAN
+MAC address: Physical address
+ARP: determines the MAC address of the next router or device on the path
+---
+
+
+Layer 7 (Application Layer)
+This is where the user interacts directly with the system.
+Examples of applications: Google Chrome, Outlook, Discord.
+Protocols used: HTTP.
+
+Layer 6 (Presentation Layer)
+Receives data from the Application Layer and ensures it is readable upon arrival.
+It encrypts, compresses, and ensures the data is not distorted or tampered with during transmission.
+
+Layer 5 (Session Layer)
+Handles starting and ending communication sessions.
+Manages the ports to be used for connections and establishes those connections.
+
+Layer 4 (Transport Layer)
+Breaks long messages into smaller packets for transmission.
+TCP vs UDP:
+
+TCP: Establishes an end-to-end session between sender and receiver, ensuring all packets arrive.
+UDP: Connectionless and doesn’t guarantee that all packets are received.
+Layer 3 (Network Layer)
+Determines the destination IP address for the packets.
+Uses DNS (Domain Name System) to resolve domain names to IP addresses and figures out the most efficient route the packet should take, including hops along the network.
+
+Layer 2 (Data Link Layer)
+Works closely with the physical layer to manage data link and error correction.
+Ensures that data is formatted correctly for transmission, manages logical circuits, and prevents collisions.
+When using TCP, it ensures reliable transmission; UDP does not handle error correction.
+
+Layer 1 (Physical Layer)
+Data is transmitted as binary signals, like electrical pulses, radio waves, or light pulses.
+1 represents "on", 0 represents "off".
+It’s responsible for the actual transmission of data over the physical medium.
+
+
+---
+Visting a website: These are the prtocols in use
+TCP: Communication protocol with a 3 way handshake
+- C1: synchronize (SYN)? C2 (SYN/ACK). C3(ACK).
+ARP (Address Resolution Prtocol): determines the MAC address of the next router or device on the path
+- network protocol helps data get to the right place by determining the MAC address of the next router or device on its path
+- It asks who in the system has this IP and then finds through MAC addresses
+HTTPS
+DNS: Translates Domain names (www.uw.edu) to IP
+
+
+Mangament protocls:
+SNMP (Simple Network managment Protocol): moniotor and manage devices
+ICMP (Internet Constrol Message Protocol): internet protocol used by devices to share data trnasmission errors across the network  
+- Ping for latency on Linux
+
+tcp/20 – (FTP) File Transfer Protocol active mode: Data transfer
+tcp/21 - (FTP) control mode: control the data transfer
+tcp/22 – (SSH) Secure Shell: encrypted remote connection
+tcp/23 – Telnet: remote connection
+tcp/25 – (SMTP) Simple Mail Transfer Protocol: send mail
+udp/53 – (DNS) Domain Name System: Converts name to IP addresses
+udp/67 – (DHCP) Dynamic Host Configuration Protocol: server listen for incoming client request
+udp/68 – (DHCP) client device receives DHCP response from DHCP server
+tcp/80 – (HTTP) Hypertext Transfer Protocol: way to get page resources over internet
+tcp/110 – (POP3) Post Office Protocol 3: retrieves mail from mail servers and deletes them
+
+
+udp/137 – (NBname) NetBIOS name service: getting IP address
+udp/138 – (NetBIOS-DGM) NetBIOS datagram service: quick alert service
+tcp/139 – (NBsession) NetBIOS session service: establish a session to transfer data
+tcp/143 – (IMAP) Internet Mail Access Protocol: retrieves mail from mail server; synch changes 
+udp/161 – (SNMP) Simple Network Management Protocol: performs queries to network server
+udp/162 – (SNMP) Simple Network Management Protocol: sends network server traps / alerts
+tcp/389 – (LDAP) Lightweight Directory Access Protocol: query / manage directory services
+tcp/443 – (HTTPS) Hypertext Transfer Protocol Secure: securely get page resources
+tcp/445 – (SMB/CIFS)Server Message Block: NetBIOS-less windows file transfer
+	(Common Internet File System)
+3389 – (RDP) Remote Desktop Protocol: Microsoft remote access
+
+SMB / CIFS 
+Old computer: NetBIOS/NetBT (Network Basic Input/ Output System/ NetBIOS over TCP/IP
+	udp/137, udp138, tcp/139
+New computer: SMB NetBIOS-less
+	tcp/445
+
+Ephemeral ports - temporary ports
+	Ports 1,024 - 65,35 determined in real-time by client
+
+---
+IEEE (802.11) wifi protocol
+
+Wifi is served via WAP (Wireless Access Points)
+IEEE (802.11) wifi standards / protocols to secures WAP through WPA (wifi protect access)
+
+Hisotry:
+WEP (1999)
+Need: Secure wireless connections to match wired network privacy.
+What it solved: Basic encryption for wireless network and enabled backwards compatability
+How: Used RC4 stream cipher for encryption, but had flaws in key management.
+
+WPA (2003)
+Need: Improve upon WEP’s weaknesses and offer backward compatibility.
+What it solved: Addressed WEP’s encryption vulnerabilities.
+How: Introduced TKIP encryption and message integrity checks to prevent alteration of transmissions
+
+WPA2 (2004)
+Need: Overcome WPA vulnerabilities (e.g., KRACK attacks).
+What it solved: Provided stronger encryption through AES and CCMP.
+How: Replaced TKIP with AES for more secure encryption and better message integrity.
+
+WPA3 (2018)
+Need: Further improve security and address WPA2's KRACK vulnerability.
+What it solved: Enhanced security for modern Wi-Fi networks.
+How: Introduced SAE for stronger password protection and 128-bit encryption (192-bit for Enterprise).
+---
+Firewalls
+Network security device to monitor
+- Port filtering
+
+Hardware Firewall
+Software Firewall: add process burden to devices
+- On Computer: analyzes traffic recieved by computer
+- On server: protects all devices connected on the server
+Cloud Firewall: software firewall hosted by a third party
+
+
+Stateless: keeps track of information passing through it and proactively filters threat in real time
+- Can discover suspiscious trends
+Stateful: operates on predefined rules and doesn't keep track of information from data packets
+
+NGFW (next gen firewall)
+- deep packet inspection
+- Intrustion Detections
+- Cloud based threat intelligence to sync and learn about new threats
+> firwall that offers the most security features
+---
+VPN (Virtual Private Network)
+
+VPN is a security service that changes your public IP address andhides your virtual location to keep data private 
+- encyrpts
+- encapsulation: protects your data by wrapping sensitive data in other data packets. 
+  This ensures there is still a header to route information but no one can read sensitive data
+- Tunneling: between device and VPN server which is unhackable without a key
+
+
+Network Segmentation:
+    - Divides the network into smaller, manageable segments.
+    - Each segment has its own access permissions and security rules.
+    - Purpose: Enhances security and limits access to sensitive resources.
+
+Security Zones:
+    - Definition: Specific segments of the network with different security measures.
+    - Types:
+        Uncontrolled Zone:
+            - Any network outside the organization's control.
+        Controlled Zone:
+            - Protects the internal network from uncontrolled zones.
+            - Includes:
+                - DMZ (Demilitarized Zone):
+                    - Public-facing servers accessible to the internet.
+                    - Acts as a perimeter network to protect internal systems.
+                - Internal Network:
+                    - Private servers and organizational data.
+                    - Requires protection from external threats.
+                - Restricted Zone:
+                    - Contains highly confidential information.
+                    - Access is significantly limited to authorized users.
+
+Subnets:
+    - Definition: Further segmentation within the internal network.
+    - Purpose: Isolates network traffic for security and network efficiency.
+    - Examples:
+        - Marketing and Finance departments have their own subnets.
+        - Students and Faculty separated into distinct subnets for different access needs.
+
+CIDR (Classless Inter-Domain Routing notation for subnetting):
+method of assigning subnet masks to IP addresses to create a subnet (198.51.100.0/24)
+https://www.ipaddressguide.com/cidr
+
+[
+Previously Classful addressing was used in the 1980s as a system of grouping IP addresses into classes (Class A to Class E).
+Problem: The rigid structure led to wasted IP addresses and growing number of devices quickly depleted available IPs
+Class A: Huge range (for very large organizations)
+Class B: Medium range (for mid-sized organizations)
+Class C: Small range (for small organizations)
+]
+
+Firewalls should be implemented between each layer of Internet, DMZ, Internal Network, Restricted Zone
+Security Analyst: Responsible for regulating access controls for firewalls (resitrcition based on IP, Ports)
+
+---
+VPN Protocols to encrypt traffic over network tunnel
+Factors to consider: connection speeds, compatibility with existing network infrastructure, and business or individual needs.
+
+Wireguard: high-speed VPN protocol, with advanced encryption, to protect users when they are accessing the internet
+- simple and easy to set up and maintain
+- used for both site-to-site connection and client server connection
+- open source, easier to debug and deploy
+- newer
+IPSec: encrypt and authenticate data packets in order to establish secure, encrypted connections
+- older and has much more OS support fromn VPN providers
+
+
+
+---
+Proxy Server (additional security)
+Sits in the middle of an internet connection so proxy server is the one interacting with internet by hidding IP address
+	Forward proxies: handle queries from internal clients and approves all outgoing request
+	Reverse proxies: Proxy provides results back to the client after examining for malicious content
+  Caches on frequently visited websites on temporary Memory enhancing security by reducing external contact
+
+> This is used for each server such as email proxy
+
+---
+Module 3
+Network Security
+Network Intrusion tactics
+Security analysis
+
+Common Network Atacks to look out for
+Physical and on the network
+
+network interception attack: Packet sniffing
+Backdoor attack: finding not heavily monitored pathways to intrude
+DoS attack
+spoofing 
+malware
+packet flooding
+
+Possible impacts:
+Financial: business continiuity, fines and reputation
+reputation
+Public Safety
+
+
+Command: affirmating leading
+Control: align control
+Communication
+---
+(DoS) Denial of Service
+targets a network / server, flooding the network traffic so it cannot repond to real users
+- disrupts normal organizaiton by overloading organization
+- Can lead an organization further vulnerable
+
+(DDoS) Distributed denial of Service
+Uses multiple devices and servers to flood the network traffic
+- increases probability of success
+
+> Using a packets that causes a router to
+
+---
+' Network-Level DoS Attacks
+' Slow Bandwidth Attacks
+    ' SYN Flood Attack
+        ' Simulates a TCP connection by sending SYN packets.
+        ' Overwhelms the server by exceeding the number of available ports.
+        ' Process:
+            ' 1. Attacker sends a SYN request.
+            ' 2. Server reserves a port and waits for a response (ACK).
+            ' 3. Attacker never sends the ACK, leaving the port in a half-open state.
+        ' Result:
+            ' - Ports are consumed.
+            ' - Server becomes overwhelmed and cannot handle legitimate connections.
+
+    ' ICMP Flood
+        ' What is ICMP?
+            ' - Internet Control Message Protocol.
+            ' - Used by devices to send control messages and error reports (e.g., unreachable destinations or timeouts).
+            ' - Facilitates diagnostics (e.g., ping, traceroute) and helps manage network traffic.
+            ' - Packets are not rebroadcasted; they are sent directly between devices.
+        ' Attack Process:
+            ' 1. Attacker repeatedly sends ICMP packets to a network server (ping).
+            ' 2. Server is forced to send ICMP responses (echo replies) for each request.
+            ' 3. Bandwidth and resources are consumed.
+        ' Result:
+            ' - Server becomes overloaded.
+            ' - Legitimate traffic is denied, leading to a crash.
+
+    ' Ping of Death
+        ' Description:
+            ' - Type of DoS attack using oversized ICMP packets (>64 KB, which exceeds the maximum allowed packet size).
+        ' Effects:
+            ' - May cause buffer overflows.
+            ' - May lead to system crashes.
+        ' Result:
+            ' - Target system becomes unresponsive or crashes completely.
+
+----
+network protocol analyzer / packet sniffer
+Wireshark and TCPDump
+TCP is an open source CLI packet sniffer that is lightweight (low memory and CPU)
+
+
+Timestamp IP SourceIP.SourcePort > Destination IP. Destination Port
+20: 00 : 29.53895 IP 198.168.10.1.14 ? 198.111.123.1.61012: Flags
+
+
+Establish a baseline for network traffic patterns and network utilization metrics.
+Detect and identify malicious traffic
+Create customized alerts to send the right notifications when network issues or security threats arise.
+Locate unauthorized instant messaging (IM), traffic, or wireless access points.
+---
+
+botnet is a collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder."
+
+
+
+
