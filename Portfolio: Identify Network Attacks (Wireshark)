@@ -1,0 +1,100 @@
+https://docs.google.com/document/d/18_ERV1nkR3ZTNX-I4EruKPEe5o-8OfMtd6XCkWoamCE/edit?tab=t.0
+How to read a WireShark TCP/HHTP log (normal and attack)
+https://docs.google.com/spreadsheets/d/1enpRzrIao3J2Lp2tOI0hmu1Cu7D7CjLGhFAiTiR9J64/edit?gid=218501934#gid=218501934 (wireshark log to analyze)
+
+Activity Overview
+
+In this activity, you will consider a scenario involving a customer of the company that you work for who 
+experiences a security issue when accessing the company’s website. You will  identify the likely cause of 
+the service interruption. Then, you will explain how the attack occurred and the negative impact it had on the website. 
+
+
+Scenario
+You work as a security analyst for a travel agency that advertises sales and promotions on the company’s website. 
+The employees of the company regularly access the company’s sales webpage to search for vacation packages their customers might like. 
+
+One afternoon, you receive an automated alert from your monitoring system indicating a problem with the web server. 
+You attempt to visit the company’s website, but you receive a connection timeout error message in your browser.
+
+You use a packet sniffer to capture data packets in transit to and from the web server. 
+You notice a large number of TCP SYN requests coming from an unfamiliar IP address. 
+The web server appears to be overwhelmed by the volume of incoming traffic and is losing 
+its ability to respond to the abnormally large number of SYN requests. You suspect the server is under attack by a malicious actor. 
+
+You take the server offline temporarily so that the machine can recover and return to a normal operating status. 
+You also configure the company’s firewall to block the IP address that was sending the abnormal number of SYN requests. 
+You know that your IP blocking solution won’t last long, as an attacker can spoof other IP addresses to get around this block. 
+You need to alert your manager about this problem quickly and discuss the next steps to stop this attacker and prevent this problem from happening again. 
+You will need to be prepared to tell your boss about the type of attack you discovered and how it was affecting the web server and employees.
+
+---
+Cybsecurity incident Report
+
+Section 1: Identify the type of attack that may have caused this network interruption
+One potential explanation for the website's connection timeout error is a Denial of Service (DoS) attack. 
+Specifically, the observed activity suggests a SYN flood attack, where a malicious client repeatedly initiates TCP handshakes with the web server.
+
+The logs reveal that a user with the IP address 203.0.113.0 is continuously sending TCP requests to the web server at 192.0.2.1. 
+The server responds to these [SYN] requests with [SYN, ACK], where the client does complete the handshake but continous to 
+flooding the server with new SYN requests—approximately 3 requests per second.
+
+Initially, the server manages to handle these requests along with legitimate traffic. However, over time, the influx of 
+incomplete handshakes overwhelms the server, leading to a disruption in service. Eventually, the server becomes 
+unresponsive to all clients, including legitimate users.
+
+This behavior aligns with the characteristics of a SYN flood attack, where the attacker exploits the server's 
+resources by sending an excessive number of SYN packets, preventing it from processing legitimate connections.
+
+
+
+
+Section 2: Explain how the attack is causing the website to malfunction
+
+When users attempt to connect to the website, the server and client engage in a three-way handshake using the TCP protocol. 
+This process typically consists of the following steps:
+
+[SYN]: The client initiates a connection by sending a SYN request to the server, indicating it wants to establish communication.
+[SYN, ACK]: The server acknowledges the request and responds with a SYN-ACK message, signaling readiness to proceed.
+[ACK]: The client completes the handshake by sending an ACK packet, after which communication begins.
+
+In a SYN flood attack, the malicious actor sends a large number of SYN packets to the server but never completes the handshake by sending the final ACK.
+The server attempts to allocate resources for each incoming SYN request, leaving open "half-open" connections. 
+As the volume of SYN packets increases, the server's connection table becomes saturated, consuming memory and CPU resources. 
+This prevents the server from responding to new incoming requests, including legitimate ones.
+
+Impact on the Server:
+The logs show repeated SYN packets from the IP address 203.0.113.0, overwhelming the server with TCP requests. 
+Eventually, the server stops responding entirely, leading to downtime for legitimate users attempting to access the website.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
