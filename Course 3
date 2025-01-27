@@ -535,15 +535,26 @@ Brute force: trial-and-error process of discovering private information.
 Simple brute force attack: randomly entering any combo of usernames and passwords
 Dictionary Attacks: attackers use a list of commonly used passwords and stolen credentials from previous breaches to access a system
 
+Assessing vulnerabilities
+VM (Virutal Machines)
+Sandbox enviroments: type of testing environment that allows you to execute software or programs separate from your network
+Commonly used for testing patches, identifying and address bugs or det
+Stand alone physical computers not connected to a network but more costly than VM
+
+Prevention measures
+Salting and Hashing:
+
+MFA / 2FA
+CAPTCHA and reCAPTCHA
+Completely Automated Public Turing test to tell Computers and Humans Apart
+reCAPTCHA is google's free protect websites from bots and malicious software
 
 
-
-
-
-
-
-
-
+--
+Network security hardening
+Port Filtering
+Network Access Privledge
+Encryption
 
 
 
