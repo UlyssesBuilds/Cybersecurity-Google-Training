@@ -408,12 +408,11 @@ Establish a baseline for network traffic patterns and network utilization metric
 Detect and identify malicious traffic
 Create customized alerts to send the right notifications when network issues or security threats arise.
 Locate unauthorized instant messaging (IM), traffic, or wireless access points.
----
 
 botnet is a collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder."
-
-
 --- 
+
+
 ' Malicious Packet Sniffing
    ' Packet Structure:
         ' - Header: Information about where the packet is from (source).
@@ -466,7 +465,6 @@ If there is a private IP address from the local network that is comeing from the
 This is all the devices with that IP tranmsissions should already be on the local network  
 > Reject all incoming traffic that has the same IP address as the local network
 ---
-
 
 
 
