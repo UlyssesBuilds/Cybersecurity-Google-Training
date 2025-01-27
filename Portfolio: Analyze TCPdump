@@ -1,0 +1,100 @@
+
+
+Activity Overview
+In this activity, you will analyze DNS and ICMP traffic in transit using data from a network protocol analyzer tool. 
+In the internet layer of the TCP/IP model, the IP formats data packets into IP datagrams. 
+The information provided in the datagram of an IP packet can provide security analysts with insight into suspicious data packets in transit.
+Knowing how to identify potentially malicious traffic on a network can help cybersecurity analysts assess security risks on a network and reinforce network security.
+
+
+Scenario
+You are a cybersecurity analyst working at a company that specializes in providing IT services for clients. 
+Several customers of clients reported that they were not able to access the client company website www.yummyrecipesforme.com, 
+and saw the error “destination port unreachable” after waiting for the page to load. 
+
+You are tasked with analyzing the situation and determining which network protocol was affected during this incident. 
+To start, you attempt to visit the website and you also receive the error “destination port unreachable.” To troubleshoot the issue, 
+you load your network analyzer tool, tcpdump, and attempt to load the webpage again. 
+To load the webpage, your browser sends a query to a DNS server via the UDP protocol to retrieve the IP address for the website's domain name; 
+this is part of the DNS protocol. Your browser then uses this IP address as the destination IP for sending an HTTPS request to the web server to display the webpage  
+The analyzer shows that when you send UDP packets to the DNS server, you receive ICMP packets containing the error message: “udp port 53 unreachable.” 
+
+---
+Timestamp IP SourceIP.SourcePort > Destination IP. Destination Port
+20: 00 : 29.53895 IP 198.168.10.1.14 ? 198.111.123.1.61012: Flags
+
+
+13:24:32.192571 IP 192.51.100.15.52444 > 203.0.113.2.domain: 35084+ A?
+yummyreceiptesforme.com (24)
+13:26:32.192571 IP 203.0.113.2 > 192.51.100.15: ICMP 203.0.113.2
+udp port 53 unreachable length 254
+
+
+line 1 is client trying to request DNS record for A record 
+  "Domain" is the DNS port on this server
+  "35084" is the Query identification number
+  "+" after the QIN is a flag associated with UDP
+  "A?" indicates DNS request for an A record
+    A record is IPv4 IP
+
+Line 3 is the ICMP protocol response
+  "udp port 53 unreachable length 254"
+  DNS port isn't listening to receive. The ICMP packet length was 254 bytes
+
+---
+Part 1: Provide a summary of the problem found in the DNS and ICMP traffic log.
+The UDP protocol analysis reveals that port 53 (DNS) is currently unreachable.
+
+The network analysis shows that an ICMP echo reply returned the error message "UDP port 53 is unreachable." 
+This means that users trying to access www.yummyreceipesforme.com are unable to reach the website 
+because the domain name cannot be resolved to an IP address.
+
+This issue may indicate problems with the DNS server or its configuration. 
+It could also suggest a potential malicious attack, such as a Denial of Service (DoS) attack, 
+targeting the DNS server and preventing it from responding properly.
+
+
+---
+Part 2: Explain your analysis of the data and provide at least one cause of the incident.
+Time of Incident: 1:24 PM
+
+The IT team became aware of the incident through reports from customers who were unable to access the client’s website. 
+The error message reported by users was “destination port unreachable.”
+
+The IT department began investigating by attempting to access the website themselves and received the same error. 
+The team then used a network analyzer tool, such as tcpdump, to further analyze the situation. 
+The tcpdump logs revealed that port 53 (DNS) was unreachable, 
+indicating that the DNS server responsible for translating domain names into IP addresses was not responding.
+
+The IT department is continuing to investigate the root cause to restore access to the DNS server. 
+
+Next steps include:
+1) Checking Other Website Queries: Verify if other websites, using different domain names, are accessible. 
+This will help determine if the issue is isolated to the specific DNS server or affects broader network functionality.
+
+2) Reviewing SIEM Logs: Analyze SIEM logs to assess network traffic patterns to the DNS server and rule out 
+potential server overloads or malicious activity, such as a denial-of-service (DoS) attack.
+
+3) Verifying DNS Services: Check the status of the DNS services and ensure they are running correctly. 
+If necessary, the DNS service will be restarted, or a backup will be restored to restore normal functionality.
+
+By following these steps, the IT department aims to identify the root cause and implement the necessary 
+measures to restore access to the DNS server and ensure system stability..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
