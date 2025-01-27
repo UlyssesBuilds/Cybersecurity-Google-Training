@@ -444,36 +444,96 @@ botnet is a collection of computers infected by malware that are under the contr
         ' - Always use encrypted connections or VPN when using public Wi-Fi.
 
 ---
-IP spoofing
-Netowrk attack. Attacker changes the source IP of a data packet to impersonate
-an authorized system and gain access to a network
+IP Spoofing and Related Network Attacks
+Overview of IP Spoofing
+IP spoofing is a network attack where an attacker alters the source IP address of a data packet to impersonate an authorized system. 
+This allows them to gain unauthorized access to a network or conduct malicious activities while disguising their identity.
 
-- On path attack: Attacker places themselves in the middle of an authrized connection and intercept
-or alters the data in transit.
-After having put themselves in the middle and learning an IP and MAC address they can impersonate themselves
-
-- replay: Malicious actor intercepts a data packet in transit and delays it or repats it another time
-Repeating it at a different time to impersonate an authorized user
-
-- smurf (= IP spoofing attack + DDoS attack). Attacker sniffs an authorized user's IP address and floods it with packets
-This brings down a network by bypasses firewalls
+Types of Attacks Involving IP Spoofing
+- On-Path Attack:
+Description: The attacker positions themselves in the middle of a legitimate communication channel between two authorized systems.
+Impact: They intercept or alter data in transit, often leveraging the IP and MAC addresses to impersonate one of the communicating parties.
+Objective: Eavesdrop, manipulate, or disrupt the communication without the parties noticing.
+[go back to packet sniffing: there is passive and active]
 
 
+- Replay Attack:
+Description: A malicious actor intercepts a valid data packet and delays or reuses it later.
+Impact: By replaying the data at a different time, the attacker can impersonate an authorized user, 
+potentially gaining access to restricted resources or bypassing authentication mechanisms.
 
-Firewalls can be confgiured to combat IP spoofing
-If there is a private IP address from the local network that is comeing from the internet it will deny the tranmission
-This is all the devices with that IP tranmsissions should already be on the local network  
-> Reject all incoming traffic that has the same IP address as the local network
+- Smurf Attack:
+Description: This combines IP spoofing with a Distributed Denial of Service (DDoS) attack.
+Mechanism: The attacker spoofs an authorized user’s IP address and floods the network with ICMP packets.
+Impact: The massive influx of packets overwhelms the network, bypassing firewalls and causing denial of service to legitimate users.
+
+
+Preventative Measures Against IP Spoofing
+Firewall Configuration:
+Firewalls can be configured to combat IP spoofing by rejecting incoming traffic that mimics local network IP addresses.
+If a private IP address from the local network originates from an external source, the firewall will deny the transmission, 
+as all devices with that IP should already reside on the local network.
+Example: Reject all incoming traffic that has the same IP address as the local network.
+
+Additional Strategies:
+Network Segmentation: Limit the exposure of critical systems by isolating them within secure segments.
+Packet Filtering: Use ingress and egress filtering to ensure that packets with spoofed IPs do not traverse the network.
+Authentication and Encryption: Strengthen authentication protocols and encrypt sensitive data to mitigate risks from on-path and replay attacks.
+
 ---
+Module 4: Security Hardening
+Strengthening a sytem to reduce its vulnerabilities and attack surface
+Attack Surface: All potential vulernabilites that a threat actor can exploit
 
 
+Security Hardening
+Hardware Hardening
+OS hardening
+Application
+Network Hardening
+Cloud hardening
+Databases
 
 
+Common security hardening
+Device configuration changes (more frequent password changes)
+Physical space (CCTV)
+Disabling unused application, devices, and ports to reduce attack surfaces
+Penetration testing: simulated attack that helps identify vulnerabilities in a system, network, website, app, processes
+
+	Security Analyst responsibilities:
+	Patch updates (software updates)
+	Backups
+
+-- 
+OS hardening
+
+First program when a computer is turned on
+OS is the intermediarary between software appliucation and computer hardware
+
+one insecure OS can compromise whole network 
 
 
+Regular hardering
+Patch update: software update
+- Run Patches ASAP, especially ones that fix known vulnerabilities 
+OS publish a patch and vulnerability fix, malicious actors know exactly where the vulnerability is in the system
 
+> This should then be added to the baseline OS (baseline configuration / image)
+- documened set of specifications within a system that is used as a basis for future builds, releases and updates
+may contain: firewall rules
 
+Hardware & Software disposal
+Properly wipe and dispose of and removing unused software
 
+Strong password policy
+- losing access after incorrect attempt x times
+MFA: something you know, something you have, something unique about you
+
+OS attacks
+Brute force: trial-and-error process of discovering private information. 
+Simple brute force attack: randomly entering any combo of usernames and passwords
+Dictionary Attacks: attackers use a list of commonly used passwords and stolen credentials from previous breaches to access a system
 
 
 
