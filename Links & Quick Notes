@@ -1,0 +1,16 @@
+TCp dump
+Timestamp IP SourceIP.SourcePort > Destination IP. Destination Port
+20: 00 : 29.53895 IP 198.168.10.1.14 ? 198.111.123.1.61012: Flags
+
+TCP dump on linux
+https://opensource.com/article/18/10/introduction-tcpdump
+
+Quick up to speed TCP dump
+ https://packetpushers.net/blog/masterclass-tcpdump-interpreting-output/
+
+
+
+
+Service names and Ports
+https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
+
