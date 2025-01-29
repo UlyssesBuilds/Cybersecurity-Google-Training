@@ -556,7 +556,26 @@ Port Filtering
 Network Access Privledge
 Encryption
 
+Fire wall
+	boarder of network to filter traffic based on a set of rules
+IDP (Intrusion Detection System )
+	sniffs network on top of switch. passive
+	used by analyst to detect and sends alerts
+IPS (Intrusion Prevention System )
+	sniffs packet actively to stop intrusive activity
+	- cons: if it breaks it will stop internet traffic
+	- con: it can have false positives to drop good traffic
+Full packet capture device
+allow you to record and analyze all of the data that is transmitted over your network. 
+They also aid in investigating alerts created by an IDS. 
+	SIEM: work in real time to create a security dashboard
+	aggregated logs (single pane of glass)
 
+>Security analysts often work in a Security Operations Center (SOC) 
+where they can monitor the activity across the network. 
+They can then use their expertise and experience to determine how to respond 
+to the information on the dashboard and decide when the events meet the criteria 
+to be escalated to oversight.
 
 
 
