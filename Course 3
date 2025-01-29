@@ -578,9 +578,20 @@ to the information on the dashboard and decide when the events meet the criteria
 to be escalated to oversight.
 
 
+---
+module 4 Cloud Security
+CSP cannot prevent intrustions
 
+use of a server baselin image for all server instances in the cloud
+compare data in cloud to baseline images to ensure that there hadn't been unverified changes
 
+similiar to OS harderning: data and applications on cloud network are kept seperate based 
+on service category, age, functions
 
+older application should be kept seperate from newer application
+Software with internal should be seperate from software used by the organization
+
+take existing software and throw it in the cloud
 
 
 
