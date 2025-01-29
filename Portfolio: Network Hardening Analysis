@@ -49,12 +49,12 @@ Password policies are used to prevent attackers from easily guessing user passwo
 or by using a script to attempt thousands of stolen passwords (commonly called a brute force attack).
 
 A one time set up of port filtering can control network traffic and can prevent potential attackers from entering a private network.
+Having a smaller attack surface makes it easier to manage and prevent threat actors from exploiting vulnerabilities.
 Then regular maintance rules can be updated in response to events that allows abnormal network traffic into the network. 
 This measure can be used to protect against various DDoS attacks.
 
 MFA can furhter protect against brute force attacks as well and create further defense from threat actors.
-
-
+Makes it more difficult for threat actors to impersonate authorized users.
 
 
 
