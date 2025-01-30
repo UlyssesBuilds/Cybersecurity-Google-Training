@@ -106,7 +106,10 @@ Availability: ensuring its available
 NIST CSF (cybsercuirty framework)
 voluntary guideline for organizations to improve cybersecurity practices for  long + short term risk mitigation
 Identify, Protect, Detect, Respond, Recover, Govern
+> CSF provides a structured, ongoing process for improving and managing cybersecurity. 
+It focuses on long-term strategic alignment with best practices and regulatory standards.
 
+Risk Assessment Report focuses on specific vulnerabilities and the immediate risks to the system, offering a snapshot of potential weaknesses and their consequences.
 
 Ethics of security:
 Adhere to protocols no matter what
