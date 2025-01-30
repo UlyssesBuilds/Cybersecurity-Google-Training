@@ -276,7 +276,7 @@ Security Zones:
                     - Access is significantly limited to authorized users.
 
 Subnets:
-    - Definition: Further segmentation within the internal network.
+    - Definition: segmentation within the internal network.
     - Purpose: Isolates network traffic for security and network efficiency.
     - Examples:
         - Marketing and Finance departments have their own subnets.
@@ -577,21 +577,144 @@ They can then use their expertise and experience to determine how to respond
 to the information on the dashboard and decide when the events meet the criteria 
 to be escalated to oversight.
 
-
 ---
 module 4 Cloud Security
-CSP cannot prevent intrustions
 
-use of a server baselin image for all server instances in the cloud
-compare data in cloud to baseline images to ensure that there hadn't been unverified changes
+Cloud Security Module
 
-similiar to OS harderning: data and applications on cloud network are kept seperate based 
-on service category, age, functions
+    1. Cloud Security Fundamentals
 
-older application should be kept seperate from newer application
-Software with internal should be seperate from software used by the organization
+        - Cloud Vulnerabilities
+            - CSP Limitations
+                - Cannot prevent all intrusions
+                - Organizations must actively monitor security
+            - Cloud Migration Risks
+                - Moving software without adaptation can introduce security gaps
+                - Legacy systems may create vulnerabilities
 
-take existing software and throw it in the cloud
+        - Shared Responsibility Model
+            - CSPs secure cloud infrastructure
+            - Organizations configure and secure their cloud services
+            - Security misconfigurations are the organization’s responsibility
+
+    2. Cloud Security Hardening
+
+        - Baselining
+            - Establishes a fixed reference point for cloud security
+            - Security measures:
+                - Restricting admin portal access
+                - Enabling password management
+                - Enabling file encryption
+                - Activating threat detection services for SQL databases
+	> used to check if anything has changed
+
+        - OS Hardening Practices
+            - Data and applications should be separated based on:
+                - Service category
+                - Age (older applications separate from newer ones)
+                - Function (internal vs. external software)
+
+        - Configuration Complexity
+            - Expanding cloud services requires precise configurations
+            - Misconfigurations can lead to security vulnerabilities
+            - Risk increases during cloud migration
+
+    3. Cloud Security Technologies
+
+        - Hypervisors
+            - Abstract the host's hardware from the OS environment
+            - Types:
+                1. Runs directly on hardware (VMware)
+			- replaces the computer's main OS with the hypervisor itself and directly controls the CPU, etc
+			- used in cloud data centers / enterprise evnrioments for optimized performance, security, and efficiency
+                2. Operates within host software (VirtualBox)
+			- Just like an app
+            - Managed by CSPs; vulnerabilities can lead to VM escapes
+
+        - Identity & Access Management (IAM)
+            - Organizes digital identities and authorizes user access
+            - Loose configurations can allow unauthorized access
+
+        - Visibility & Tracking
+            - On-premise admins have full packet-level visibility
+		Packet-level visibility means you can see every data packet traveling through your network.
+		You can inspect, analyze, and potentially block any traffic that looks suspicious or harmful.
+		Admins have control over all traffic routes, logs, and can monitor everything in real-time.
+            - Cloud environments:
+		CSPs provide security but limit customer access to traffic monitoring
+		limited traffic monitoring due to multiple organizations sharing the same physical
+                - Flow logs: summary of network traffic that show metafata but not the actual content
+			traffic went from IP address A to IP address B on port 443 (HTTPS) at a specific time
+			> logs help with identifying patterns or detecting anomalies that could indicate potential threats.
+                - Packet mirroring
+			duplicating the network packets and sending a copy to a monitoring or analysis system.
+			This allows cloud admins to inspect the actual data traffic being exchanged between instances.
+			> enables more detailed traffic inspection and analysis, similar to what an on-premise admin would have/
+			not usually set by default
+            - Third-party audits assess CSP security
+
+    4. Cryptography & Key Management in the Cloud
+
+        - Encryption & Data Integrity
+            - Ensures data confidentiality through encryption
+            - Secure key management systems protect encryption keys
+
+        - Cryptographic Erasure
+	  process of making encrypted data permanently unrecoverable by deleting the encryption keys used to protect it.
+            - Crypto-shredding: Technique to destroys cryptographic keys used for decryption
+	    - Deletes encryption keys to render data unrecoverable
+	> Securely destroying senseitive data
+
+        - KMS (Key Management Systems)
+            - TPM (Trusted Platform Module)
+                - specialized hardware chip installed on devices to securely stores passwords, certificates, and encryption keys
+		- Isolates itself from other software and is physically tamper resistant so even if the hardware or system is compromised it is reliable. 
+            - CloudHSM (Cloud Hardware Security Module)
+                - Cloud based servivce to securely stores cryptographic keys
+                - Performs cryptographic operations (encryption, decryption)
+		> cloud - native "TPM"
+
+        - Customer Responsibility for Encryption
+            - BYOK (Bring your own keys)
+		Customers may provide their own encryption keys
+		- basically not relying on CSP default enryuption keys but using one own's encryption key
+		to have control over their encrypt and decryption process to ensuring exclusive control over their data
+            		> CSPs cannot assist if customer keys are lost or compromised.
+			> data becomes permanently inaccessible
+            - Organizations must assess CSP security through audits to ensure that CSP's KMS are secured
+		(e.g., FEDRAMP for federal contractors)
+
+    5. Cloud Security Best Practices
+
+        - Baseline Security Measures
+            - Use a server baseline image for cloud instances
+            - Compare cloud data to baseline images for unauthorized changes
+		    - Restricting access to the admin portal
+	            - Enabling password management
+	            - Enabling file encryption
+	            - Activating threat detection services for SQL databases
+
+        - CSP Security Responsibilities
+            - Stay up to date on security threats & attack surfaces
+            - Monitor and respond to zero-day vulnerabilities
+	    - manage the hypervisor and other virtualization components
+	        - Vulnerabilities or misconfigurations can lead to VM escapes
+	        - Customers rarely interact directly with hypervisors
+
+        - Impact on Organizations
+            - Companies must update IT processes for cloud security
+            - Cloud networking provides affordable security for small businesses
+            - Increased security complexity requires dedicated personnel
+
+
+    Shared Responsibility in Cloud Security
+	- CSP is responsible for security involving the infastr4ucutre, physical data centers, hypervisor, host operating system
+	- client is responsible for assets and process that they store and operate in the cloud
+	> A problem occurs when organizations assume that the CSP is taking care of security that they have not taken responsibility for.
+
+
+
+
 
 
 
