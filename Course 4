@@ -188,5 +188,76 @@ The kitchen (dpkg) cooks the meal, making sure all necessary ingredients (depend
 The waiter (apt) serves the dish, ensuring everything is ready for you to enjoy.
 
 
+Package Management Tool (apt) = Project Manager
+  Orders materials (packages)
+  Ensures workers (package manager) have what they need
+  Manages dependencies (making sure everything fits together)
+ 
+Package Manager (dpkg) = Construction Worker
+  Installs materials (puts files in the correct place)
+  Follows orders from the Project Manager (apt)
+  Does not handle dependencies—it just does what it's told
+
+---
+Module 2 Shell
+
+Shell
+Command line interpreter
+provides CLI to interct with the OS
+
+different type of Shells
+Bourne-Again Shell (bash)
+C Shell (csh)
+Korn Shell (ksh)
+Enhanced C shell (tcsh)
+Z Shell (zsh)
+
+Ksh and bash use $ to indicate  where user types there command
+Zsh uses % to indicate where users type
+
+> Bash is default shell in most linux distros
+  user friendly 
+
+-
+Commuication with the shell
+1) Standard input: information received by the OS via the Command Line
+2) Standard Output: info returned from the OS through the shell
+3) standard error: error message returned by the OS through the shell
+    mispelled command or inappropriate permissions
+
+
+Commands:
+echo: outputs a specified string of text 
+  $ echo hello 
+string data: order sequence of characters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
