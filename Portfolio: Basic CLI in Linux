@@ -46,14 +46,70 @@ $ expr 3500 * 12
 
 Task 3. Clear the Bash shell
 $ clear
+---
+Activitiy Overview 3: 
+In this lab activity, you’ll navigate a Linux file structure, locate files, and read the contents of files. 
+You’ll also need to answer a few multiple-choice questions based on the information contained in these files.
+
+Task 1. Get the current directory information
+$ pwd
+/home/analyst
+
+How many directories does the current working directory contain?
+ls
+logs  projects  reports  temp
+> 4
+
+Task 2. Change directory and list the subdirectories
+cd /reports
+
+What is the name of the subdirectory in the /home/analyst/reports directory?
+ls
+> users
 
 
+Task 3. Locate and read the contents of a file
+In this task, you must navigate to a subdirectory and read the contents of a file it contains.
+
+Navigate to the /home/analyst/reports/users directory.
+cd users
+
+List the files in the current directory.
+ls
+Display the contents of the Q1_added_users.txt file.
+cat Q1_added_users.txt
+
+employee_id  username  department
+1001         bmoreno   Marketing
+1026         apatel    Human Resources
+1041         cgriffin  Sales
+1104         mreed     Information Technology
+1177         aezra     Human Resources
+1188         noshiro   Finance
 
 
+Task 4. Navigate to a directory and locate a file
+In this task, you must navigate to a new directory, locate a file, and examine the contents of the file.
 
+Navigate to the /home/analyst/logs directory.
+Display the name of the file it contains.
+Display the first 10 lines of this file.
 
+How many warning messages are in the first 10 lines of the server_logs.txt file?
+cd /home/analyst/logs
+ls
+head server_logs.txt
 
-
+analyst@6dc41676d8cb:~/logs$ head server_logs.txt
+2022-09-28 13:55:55 info    User logged on successfully
+2022-09-28 13:56:22 error   The password is incorrect
+2022-09-28 13:56:48 warning The file storage is 75% full
+2022-09-28 15:55:55 info    User logged on successfully
+2022-09-28 15:56:22 error   The username is incorrect
+2022-09-28 15:56:48 warning The file storage is 90% full
+2022-09-28 16:55:55 info    User navigated to settings page
+2022-09-28 16:56:22 error   The password is incorrect
+2022-09-28 16:56:48 warning The current user’s password expires in 15 days
 
 
 
