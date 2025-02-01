@@ -1,0 +1,131 @@
+Activity 1
+In the Manage authorization lab, 
+check the permissions set for files and subdirectories in the projects directory. Make sure you display all permissions, including hidden files
+explain the commands you used in that lab, and this will help you prepare for future job interviews and other steps in the hiring process.
+
+
+Project description
+I will check the permissions set for files and subdirectories in the Projects directory, 
+including all hidden files and change accordingly following a least privledges model.
+This least privledges model follows the idea of granting users with only the permissions necessary on a need to know basis.
+
+
+File permissions in Linux are read as follows
+drwxrwxrwx 3 researcher2 research_team 4096 Feb  1 17:39 .
+
+This permission could be understood as follows:
+The first character pertains to stating if this is a file or a directory
+  d = directory
+  - = file
+
+The next 9 characters repeat three times in a sequence r, w, and x
+  r = reading privlddges, similiar to viewing on a document
+  w = write such as allowing modification
+  x = execute or using the application 
+
+These repeat three times to signfiy three distinct owners
+  first owner is the user or owner of the file / directory
+  second owner is a collection of users who share permissions to the file
+  third owner is other or anyone else
+
+
+File and Directory Details in Projects:
+researcher2@fad62ce70320:~/projects$ ls -la
+drwxr-xr-x 3 researcher2 research_team 4096 Feb  1 17:39 .
+drwxr-xr-x 3 researcher2 research_team 4096 Feb  1 19:10 ..
+-rw--w---- 1 researcher2 research_team   46 Feb  1 17:39 .project_x.txt
+drwx--x--- 2 researcher2 research_team 4096 Feb  1 17:39 drafts
+-rw-rw-rw- 1 researcher2 research_team   46 Feb  1 17:39 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Feb  1 17:39 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Feb  1 17:39 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Feb  1 17:39 project_t.txt
+
+Permission String Breakdown:
+In file "." 
+  user has permission to read, write, execute
+  group has permission to read, execute
+  other has permission to execute
+In file ".." 
+  user has permission to read, write, execute
+  group has permission to read, execute
+  other has permission to execute
+In directory ".project_x.txt" 
+  user has permission to read, write
+  group has permission to write
+  other has permission to NONE
+In file "drafts" 
+  user has permission to read, write, execute
+  group has permission to write
+  other has permission to NONE
+In directory "project_k.txt" 
+  user has permission to read, write
+  group has permission to read, write
+  other has permission to read, write
+In directory "project_m.txt" 
+  user has permission to read, write
+  group has permission to read
+  other has permission to NONE
+In directory "project_r.txt" 
+  user has permission to read, write
+  group has permission to read, write
+  other has permission to read
+In directory "project_t.txt" 
+  user has permission to read, write
+  group has permission to read, write
+  other has permission to read
+
+
+Change File Permission 
+The research team has archived .project_x.txt, which is why it’s a hidden file. 
+This file should not have write permissions for anyone, but the user and group should be able to read the file. 
+Use a Linux command to assign .project_x.txt the appropriate authorization.
+
+
+researcher2@fad62ce70320:~/projects$ chmod -R o= /home/researcher2/projects 
+researcher2@fad62ce70320:~/projects$ chmod o= ..
+chmod u=r,g=r .project_x.txt
+researcher2@fad62ce70320:~/projects$ ls -la
+
+
+drwxr-x--- 3 researcher2 research_team 4096 Feb  1 17:39 .
+drwxr-x--- 3 researcher2 research_team 4096 Feb  1 19:10 ..
+-r--r----- 1 researcher2 research_team   46 Feb  1 17:39 .project_x.txt
+drwx--x--- 2 researcher2 research_team 4096 Feb  1 17:39 drafts
+-rw-rw---- 1 researcher2 research_team   46 Feb  1 17:39 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Feb  1 17:39 project_m.txt
+-rw-rw---- 1 researcher2 research_team   46 Feb  1 17:39 project_r.txt
+-rw-rw---- 1 researcher2 research_team   46 Feb  1 17:39 project_t.txt
+
+Change Directory Permissions
+The files and directories in the projects directory belong to the researcher2 user. 
+Only researcher2 should be allowed to access the drafts directory and its contents. 
+
+researcher2@fad62ce70320:~/projects$ chmod g= drafts
+researcher2@fad62ce70320:~/projects$ ls -l
+drwx------ 2 researcher2 research_team 4096 Feb  1 17:39 drafts
+
+Summary:
+After reviewing the file permissions in the project directory using linux
+and permisisons standards from internal documents I noticed discrepencies in who was provided access.
+From there modified file permiossion using chmod command and ensured that the correct permissions were established
+by checking detailed file permissions using ls -la, which give me a long version of all files to see file permissions on
+even hidden files.
+
+Now our permissions are set according to Interal standards and adhere to the least privledges model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
