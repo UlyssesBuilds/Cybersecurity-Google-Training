@@ -1,0 +1,90 @@
+module 4: SQL
+
+review data
+
+relational databases
+SQl queries
+SQL filters
+SQL joins
+
+
+Databses: access by multiple people simultaneousl
+store massive amount of data
+perform complex task while accessing data
+
+--
+relational databases: logically organizing data in clustering tables taht are related to each other
+
+Table: must represent one idea
+Primary key: every row has a new entry and unique identificator
+foreign key: primary key of another tbale
+
+--
+SQL
+programming language, used to create, interact with, and request information from a database
+
+Retrieve logs to review
+  visitors to my site and the task they performed
+  > unusual patterns
+
+Helpful to find releveant inforamtin to support cybersecurity relateed decisions
+  such as when to launch updates
+
+
+Linux filters data in the context of files and directories on a computer system. 
+It’s used for tasks like searching for specific files, manipulating file permissions, or managing processes. 
+
+SQL is used to filter data within a database management system. 
+It’s used for querying and manipulating data stored in tables and retrieving specific information based on defined criteria. 
+> joining tables
+
+"*" all
+
+SELECT column, column
+FROM table
+ORDER BY column asc
+;
+
+SELECT customerid, city, country
+FROM customers
+ORDER BY country, city;
+
+  
+first choose the country and then the city column. SQL then sorts the output by country, and for rows with the same country, it sorts them based on city.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
