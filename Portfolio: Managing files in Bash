@@ -1,0 +1,51 @@
+Lab 1
+
+In this lab, you’ll learn how to use the grep command and piping to search for files and return specific information. 
+You’ll get information from different files, including server log files and user data files. You’ll use Linux commands in the Bash shell to complete these steps.
+
+Task 1. Search for error messages in a log file
+
+analyst@25a7199377f0:~$ ls
+logs  project  reports  temp
+analyst@25a7199377f0:~$ cd logs
+analyst@25a7199377f0:~/logs$ grep error server_logs.txt
+2022-09-28 13:56:22 error   The password is incorrect
+2022-09-28 15:56:22 error   The username is incorrect
+2022-09-28 16:56:22 error   The password is incorrect
+2022-09-29 13:56:22 error   An unexpected error occurred
+2022-09-29 15:56:22 error   Unauthorized access
+2022-09-29 16:56:22 error   Unauthorized access
+
+Task 2. Find files containing specific strings
+
+Using the pipe character (|), pipe the output of the ls command to the grep command to list only the files containing the string Q1 in their names.
+List the files that contain the word access in their names.
+
+analyst@25a7199377f0:~/logs$ cd /home/analyst/reports/users
+analyst@25a7199377f0:~/reports/users$ ls | grep "Q1"
+Q1_access.txt
+Q1_added_users.txt
+Q1_deleted_users.txt
+analyst@25a7199377f0:~/reports/users$ ls | grep "access"
+Q1_access.txt
+Q2_access.txt
+Q3_access.txt
+Q4_access.txt
+
+--
+Lab 2
+Task 1. Create a new directory
+mkdir logs
+Task 2. Remove a directory
+rmdir temp
+Task 3. Move a file
+mv Q3patches.txt /home/analyst/reports/
+ls /home/analyst/reports
+Task 4. Remove a file
+rm tempnotes.txt
+Task 5. Create a new file
+touch tasks.txt
+Task 6. Edit a file
+nano tasks.txt
+  Completed tasks
+  1. Managed file structure in /home/analyst
