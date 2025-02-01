@@ -1,0 +1,192 @@
+Computing Basics: OS (linux) and interact with organization's data (SQL)
+
+
+
+Module 1: Operating_Systems
+
+Common_OS_Types
+  Windows, macOS, Linux, ChromeOS, Android, iOS
+    Open-source vs. Closed-source (Security & Vulnerabilities)
+Legacy Software (Embedded systems & Critical hardware)
+
+OS_Functions
+  Interface between hardware & user
+  Runs multiple applications efficiently
+  Manages system resources (Memory, CPU, Storage, I/O)
+  OS Security: Protects against vulnerabilities
+
+OS_Architecture
+  Process Flow: User → Application → OS → Hardware
+  Boot Process: BIOS/UEFI → Bootloader → OS
+Vulnerabilities: Security risks in boot processes & OS interactions
+
+-
+Linux_In_Security
+Why_Linux
+  Common in cybersecurity & IT operations
+  CLI vs. GUI usage for security tasks
+
+Security_Use_Cases
+  Managing user access & permissions
+  Configuring & maintaining firewalls
+
+System_Resources
+Resource_Allocation
+  OS manages CPU, Memory, Storage, and I/O
+  Task Manager to monitor system resource usage
+
+Performance_Issues
+  Slow performance? Malware or inefficient resource allocation
+  Identifying resource bottlenecks
+
+-
+GUI v CLI
+
+User can interact with the OS via a GUI or CLI
+GUI: graphic user interface
+- start menu: program groups
+- task bar: launching programs
+- Desktop: icons & shortcuts
+
+CL: Comman line interface
+Commands to communicate with the OS
+- flexible and control over commands 
+- Efficient / fast
+- History of actions in a history file
+- multiple tasks can be done simulataneously
+> more powerful than GUI
+
+API: designing the interface in which a develop interacts with the machine
+
+
+---
+Module 2: Linux
+Architecure of Linux
+Distributions of Linux
+Shell
+
+
+-
+Linux history
+Open source made in two parts
+Linus improved UNIX OS to make it opern source and available to everyone
+- revolutionary: Linux kernel
+Richard Stalmen worked on GNU based on UNIX OS as well
+- free and open to anyone and implemented the kernel
+
+Open source: use share and dsitribute OS freely under GNU license
+Developers can collaborate and advance security
+
+Linux has many dsitros 600+
+Linux is used to investigate an error log and verify access and authentication in IAM
+Different distros may be used for different task / user needs
+
+-
+Architecure of Linux
+Elements in Linux
+User: Person ineracting with computer
+  Multi-user system: more than one user can use the system's resources at the same time
+application: Program that performs a task
+  Nano: text editor application
+  installed via package managers
+shell:  command-line interpreter that takes user input and translates it into actions for the OS
+  input command and outputs results
+FHS (Filesytem Hierarcy Standard)
+  Component of the Linux OS that organizes the data into a tree directory
+  (file cabinnent to store and find data when called upon)
+Kernel: Core of the OS that manages processes, memory, and hardware efficiently
+  communicates with the hardware to execute the OS sent by the shell
+  uses drivers to enable applications to execute task and runs efficiently
+Daemons: Background Processes
+  System services that run in the background (e.g., network management, logging, security)
+  They start at boot and keep running, unlike regular applications that only run when launched by a user
+  Examples: sshd (Secure Shell Daemon for remote login) / cron (automates scheduled tasks)
+Hardware: physical components
+  Internal hardware: components required to run computer (CPU, RAM, hard drive)
+  external hardwaree: mouse and keyboard
+
+-
+How They Work Together
+User enters a command in the Shell
+Shell interprets the command and sends it to the Kernel
+Kernel communicates with Hardware to execute the task
+Daemons may assist in managing background operations (e.g., system logs, networking)
+Files and Applications retrieve or store data in the Filesystem
+
+
+-
+linux distributions
+distros created from the open source kernal
+each has its own preinstalled programs, user interfaces, and more
+
+Parent distributions
+Red Hat
+Slackware
+Debian
+
+Kali Linux
+Purpose: Designed for offensive security, penetration testing, and digital forensics
+Base OS: Derived from Debian
+Best Practice: Should be used in a virtual machine (VM) to prevent system 
+  corruption and allow easy rollbacks
+
+Pen tester: Simulate an attack to indentified vulnerabilites
+- metasploit: look and exploit vulnerabilites on machines
+- burp suite: test for weaknesses in web applications
+- john the ripper: test password
+
+Digital Forensics:
+Collecting and analyzing data to derrmine what has happened after an attack
+looking at network activity
+- WireShark: GUI network taffic analyzer (record for details)
+- tcpdump: CLI command for packet capturing (fast real time packets)
+- Autopsy: used to analyze hard drives and smartphones
+
+
+Ubuntu
+Purpose: Ubuntu is also widely used for cloud computing
+Base OS: Derived from Debian
+
+Parrot
+Purpose: beginner friendly GUI pen testing and digital forensics
+Base OS: Derived from Debian
+
+Red hat enterprise Linux: 
+Purpose: built and supported for enterprise use where you pay for dedicated 
+  support team for customers to call about issues.
+
+Almalinux
+Purpose: community driven linux distro to replace CentOS8 to keep apps
+  and configurations continue functioning as CentOS 
+
+-
+
+Application installed via packet manager
+package manager is a tool that helps users install, manage, and remove packages or apps. 
+A package is a piece of software that can be combined with other packages to form an application.
+
+
+Types of Package Managers:
+Each packet manager work with heac distro depending on their parent
+
+File extension names
+Red Hat Packet Manager (RPM): .rpm 
+Debian-derived Linux distributions (dpkg): .deb
+
+Package managment tools:
+manage, search, and install packages
+APT (Advanced Package Tool): debiam derived
+YUM (Yellowdog Updater Modified)
+
+-
+Package Manager (dpkg, rpm): Like the kitchen staff who prepare individual ingredients (basic package handling).
+Package Management Tool (apt, dnf): Like a restaurant waiter who takes your order, ensures you get the right dish, and brings everything together smoothly (handles dependencies and repositories).
+
+You place an order (sudo apt install vlc).
+The waiter (apt) checks what ingredients are needed and tells the kitchen (dpkg) to prepare them.
+The kitchen (dpkg) cooks the meal, making sure all necessary ingredients (dependencies) are included.
+The waiter (apt) serves the dish, ensuring everything is ready for you to enjoy.
+
+
+
+
