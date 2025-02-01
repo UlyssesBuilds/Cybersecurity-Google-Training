@@ -1,0 +1,30 @@
+Activity overview
+In this lab activity, you’ll use the Advanced Package Tool (APT) and sudo to install and uninstall applications in a Linux Bash shell.
+
+--
+Debian basedLinux using Bash CLI
+
+Task 1: Ensure that APT is installed
+  [apt is Debian based package manager]
+
+~$ apt
+
+
+Task 2. Install and uninstall the Suricata application
+  [network analysis tool used for intrusion detection]
+
+~$ sudo apt install suricata
+~ sudo apt remove suricata -y
+
+> Check to see if installed and removed by trying to run the application 
+  ~$ suricata
+
+Task 3. Install the tcpdump application
+  [Use the APT package manager to list all installed applications.]
+
+~$ sudo apt tcpdump
+
+Task 4. List the installed applications
+
+~$ apt list --installed
+Task 5. Reinstall the Suricata application
