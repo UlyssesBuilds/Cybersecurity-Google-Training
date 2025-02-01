@@ -1,7 +1,6 @@
 Computing Basics: OS (linux) and interact with organization's data (SQL)
 
 
-
 Module 1: Operating_Systems
 
 Common_OS_Types
@@ -231,22 +230,146 @@ echo: outputs a specified string of text
   $ echo hello 
 string data: order sequence of characters
 
+---
+Module 3: Navigate the linux file system (BASH)
+
+Security analyst
+work with server logs
+navigate, manage, and analyze files remotely
+Verify and configure users and group access
+Give authorization and set file permissions
+
+FHS (Filesystem Hierarchy Standard):
+Component of the OS that organizes data in tree format
+
+Root Directory: /
+Highest level directory in Linux
+
+Branches 
+/Home
+
+> standard FHS directories
+/home
+  each user in the system gets their own home directory
+/bin
+  bin / binary contrains executable files
+  executable fiels: series of commands a computer needs to follow to run programs & perform other functions
+/etc
+  stires the system's configuratiion files
+/tmp
+  stores many temporary files
+  commonly used by attackers because anyone in the system can modify these files
+/mnt
+  "mount" and stores media, such as USB drives and hard drives
+
+Command <argument>
+Argument
+  speciifc information needed by a command
+
+-
+[Commands]
+man hier: learn more about FHS and its standard directories
+pwd: print the working directorory
+
+whoami: user you are workin as
+
+ls: list files and directories in current working directory
+- Files are .txt 
+- Directories are further branches
+> I can ls the subdirectory I want to look into even if I am not there
+
+cd: to change directories
+> cd.. to go up ne level
+
+cat: displays file content
+head: displays first 10 lines (if file is big) 
+tail: to read the most recent information in a log file
+less: returns the content of a file one page at a time (use keyboard to move. space = +1 page; q = quit)
+- 
+Quick notes
+You can navigate to specific subdirectories using their absolute or relative file paths
+  The absolute file path is the full file path, which starts from the root. 
+    /home/analyst/projects
+  relative file path is the file path that starts from a user's current directory
+    ../projects
+     ~/logs (~ showcases this is under user's home directory)
+
+---
+Manage content in Bash
+
+Filter: searching system for specific information
+  EX: It is determined this malware contains a piece of characters we then search our files for
 
 
+grep: search inside file and containing a pattern of string and returns the line
+<"specified string" file>
+
+"|" Piping:
+  sends a standard output of one command as the stanard input to another command for further processing
+
+> ls /home/analyst/reports | grep users
+  all files and contents in reports subdirectories are redirected to search for users and returns files that contain specified string
+EX:
+  grep error time_logs.txt
+
+-
+Find: search for files or directories based on attributes
+  specific string in the name (prints all the lines containing this)
+  certain file size
+  when files/directories were last modified with certain timee frame
+> This is all enabled by options 
+  find -name "example.txt"
+
+-name: case sensitive
+  /home/analyst/projects -iname "*log*"
+-inmame: not case sensitive
+  would return log and LOG
+-mtime: when a file was last modified based on days
+  mtime +1 indicates all files or directories last modified more than one day ago
+  mtime -1 last modified less than one day ago
+-mmin: searched based on minuets
+
+-
+Create and modify directories and files
+mkdir <directory name>: create directory
+rmdir <directory name>: removes directory
+
+touch <file name>: creates file
+rm: removes files
+
+mv: moves file / directory into new location
+  we must be in the pwd where the file is currently located at
+  mv <filing we are moving> <new file location>
+cp: copies file / directory into new location
+  we must be in the pwd where the file is currently located at
+  mv <filing we are moving> <file copy>
+      mv /home/user/downloads/file1.txt /home/user/docs/
+      [I can also move and copy the file from anywhere]
+
+[mv can also be created to rename files by passiong the new name instread of location]
+
+nano: file editor
+  doens't auto save: Ctrl + O.
 
 
+> Using echo and redirection for file maniup
+"|" ">"
+
+Append: echo "last updated date" >> permissions.txt 
+  appends “last updated date” to the file contents
+Overwrite: Entering echo "time" > permissions.txt 
+  overwrites the entire file contents of permissions.txt 
+
+Use | when you need to send the output from one command to another command (e.g., grep, awk, etc.).
+Use > when you need to overwrite a file with the output.
+Use >> when you need to append to a file without erasing the current content
+
+-
+Authenticate and authorize users
 
 
-
-
-
-
-
-
-
-
-
-
+authenticating and authorizing users
+  add and delete users from the systems and option to files they are
 
 
 
