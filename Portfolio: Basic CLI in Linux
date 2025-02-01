@@ -1,4 +1,4 @@
-Activity overview
+Activity overview 1:
 In this lab activity, you’ll use the Advanced Package Tool (APT) and sudo to install and uninstall applications in a Linux Bash shell.
 
 --
@@ -8,7 +8,6 @@ Task 1: Ensure that APT is installed
   [apt is Debian based package manager]
 
 ~$ apt
-
 
 Task 2. Install and uninstall the Suricata application
   [network analysis tool used for intrusion detection]
@@ -28,3 +27,61 @@ Task 4. List the installed applications
 
 ~$ apt list --installed
 Task 5. Reinstall the Suricata application
+
+
+---
+Activity overview 2: 
+n this lab activity, you’ll use the echo command to examine how input is received and how output is returned in the shell. 
+Next, you’ll use the expr command to further explore input and output while performing some basic calculations in the shell.
+
+
+Task 1. Generate output with the echo command
+~$ echo hello
+hello
+
+Task 2. Generate output with the expr command
+  [expr command performs basic mathematical calculations]
+$ expr 3500 * 12
+4200
+
+Task 3. Clear the Bash shell
+$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
