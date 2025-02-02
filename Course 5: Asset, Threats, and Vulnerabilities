@@ -1,0 +1,105 @@
+Safeguarding Information
+
+Moduel 1: Understanding Assets, Threats, and Vulnerabilities
+
+
+Asset – Anything valuable that needs protection (e.g., data, hardware, software).
+Threat – A potential danger to an asset (e.g., hackers, malware, insider threats).
+Vulnerability – A weakness that can be exploited (e.g., outdated software, weak passwords).
+
+
+
+B. Encryption & Data Protection
+Encryption: Converts data into unreadable code (AES-256 is industry standard).
+
+Data at rest: Encrypt files on storage devices.
+Data in transit: Use TLS/SSL for secure transmission over networks.
+Data in use
+
+data lifecycle
+Collect
+Store
+Use
+Archive
+Destroy
+
+Security Controls
+Technical
+Operation
+managerial
+
+Data goveranance
+Data owner: the person that decides who can access, edit, use, or destroy their information.
+Data custodian: anyone or anything that's responsible for the safe handling, transport, and storage of information.
+Data steward: the person or group that maintains and implements data governance policies set by an organization.PII is any information used to infer an individual's identity. Personally identifiable information, or PII, refers to information that can be used to contact or locate someone.
+
+PII (personaly Indetificable Information_: anything used to contact you
+PHI (protected health information):  HIPAA
+SPII (Sensitive PII) bank account, login, SNN
+ > may be needed at specific moments: should be recorded when, why and who
+
+Information privacy refers to the protection of unauthorized access and distribution of data.
+Information security (InfoSec) refers to the practice of keeping data in all states away from unauthorized users.
+
+-
+Module 2: Encryption
+
+Encryption: the process of converting data from a readable format to an encoded format
+Public key infrastructure (PKI): an encryption framework that secures the exchange of online information
+Cipher: an algorithm that encrypts information
+
+Symmetric encryption is the use of a single secret key to exchange information. 
+  Because it uses one key for encryption and decryption, the sender and receiver must know the secret key to lock or unlock the cipher.
+Asymmetric encryption is the use of a public and private key pair for encryption and decryption of data. 
+  It uses two separate keys: a public key and a private key. The public key is used to encrypt data, and the private key decrypts it. 
+  The private key is only given to users with authorized access CA(Certicate Authority)
+
+
+
+Generating keys
+These algorithms must be implemented when an organization chooses one to protect their data. 
+One way this is done is using OpenSSL, which is an open-source command line tool that can be used to generate public and private keys. 
+OpenSSL is commonly used by computers to verify digital certificates that are exchanged as part of public key infrastructure.
+
+Obscurity is not security: cryptography should be designed in such a way that all the details of an algorithm—except for the private key—should be 
+knowable without sacrificing its security. For example, you can access all the details about how AES encryption works online and yet it is still unbreakable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
