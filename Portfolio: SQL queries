@@ -294,6 +294,23 @@ SELECT * FROM log_in_attempts WHERE event_id BETWEEN 100 AND 150
 |      106 | tmitchel | 2022-05-12 | 06:15:41   | MEXICO  | 192.168.3.252   |       1
 
 
+---
+Activity 6:
+First, you’ll use an inner join to identify which employees are using which machines.
+SELECT *   FROM machines 
+    -> INNER JOIN employees ON machines.device_id = employees.device_id    -> ;
++--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
+| device_id    | operating_system | email_client   | OS_patch_date | employee_id | employee_id | device_id    | username | department             | office      |
++--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
+| a320b137c219 | OS 2             | Email Client 2 | 2021-03-01    |        1000 |        1000 | a320b137c219 | elarson  | Marketing             
+
+Second, you’ll retrieve the information of all employees and any machines that are assigned to them.
+
+SELECT *   FROM machines LEFT JOIN employees ON machines.device_id = employees.device_id;
++--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
+| device_id    | operating_system | email_client   | OS_patch_date | employee_id | employee_id | device_id    | username | department             | office      |
++--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
+| a320b137c219 | OS 2             | Email Client 2 | 2021-03-01    |        1000 |        1000 | a320b137c219 | elarson  | Marketing              | East-170    |
 
 
 
