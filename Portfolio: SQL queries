@@ -185,3 +185,120 @@ SELECT event_id, username, login_date FROM log_in_attempts WHERE event_id >= 100
 |      101 | sbaelish | 2022-05-08 |
 |      102 | jreckley | 2022-05-09 |
 
+--
+Activity 4
+First, you’ll retrieve all failed login attempts after business hours. 
+SELECT * FROM log_in_attempts WHERE login_time > "18:00" AND success = "FALSE";
++----------+----------+------------+------------+---------+-----------------+---------+
+| event_id | username | login_date | login_time | country | ip_address      | success |
++----------+----------+------------+------------+---------+-----------------+---------+
+|        2 | apatel   | 2022-05-10 | 20:27:27   | CAN     | 192.168.205.12  |       0 |
+|       18 | pwashing | 2022-05-11 | 19:28:50   | US      | 192.168.66.142  |       0
+
+Second, you’ll retrieve all login attempts that occurred on specific dates. 
+Your team is investigating a suspicious event that occurred on '2022-05-09'. 
+You want to retrieve all login attempts that occurred on this day and the day before 
+('2022-05-08').
+
+SELECT * FROM log_in_attempts WHERE login_date = "2022-05-09" OR login_date <= "2022-05-08";
++----------+----------+------------+------------+---------+-----------------+---------+
+| event_id | username | login_date | login_time | country | ip_address      | success |
++----------+----------+------------+------------+---------+-----------------+---------+
+|        1 | jrafael  | 2022-05-09 | 04:56:27   | CAN     | 192.168.243.140 |       1 |
+|        3 | dkot     | 2022-05-09 | 06:47:41   | USA     | 192.168.151.162 |       1 |
+
+Third, you’ll retrieve logins that didn't originate in Mexico.
+Now, your team is investigating logins that did not originate in Mexico, and you need to find this information. 
+Note that the country field includes entries with 'MEX' and 'MEXICO'
+
+SELECT *
+    -> FROM log_in_attempts
+    -> WHERE NOT country like "MEX%";
++----------+----------+------------+------------+---------+-----------------+---------+
+| event_id | username | login_date | login_time | country | ip_address      | success |
++----------+----------+------------+------------+---------+-----------------+---------+
+|        1 | jrafael  | 2022-05-09 | 04:56:27   | CAN     | 192.168.243.140 |       1 |
+|        2 | apatel   | 2022-05-10 | 20:27:27   | CAN     | 192.168.205.12  |       0
+
+
+Fourth, you’ll retrieve information about certain employees in the Marketing department. 
+our team is updating employee machines, and you need to obtain the information about employees in the 'Marketing' 
+department who are located in all offices in the East building (such as 'East-170' or 'East-320').
+
+SELECT * FROM employees WHERE department = "Marketing" AND office like "East%";
++-------------+--------------+----------+------------+----------+
+| employee_id | device_id    | username | department | office   |
++-------------+--------------+----------+------------+----------+
+|        1000 | a320b137c219 | elarson  | Marketing  | East-170 |
+|        1052 | a192b174c940 | jdarosa  | Marketing  | East-195 |
+
+Fifth, you’ll retrieve information about employees in the Finance or the Sales department. 
+Now, your team needs to perform a different update to the computers of all employees in the 
+Finance or the Sales department, and you need to locate information on these employees.
+
+SELECT * FROM employees WHERE department = "Finance" OR department = "Sales";
++-------------+--------------+----------+------------+-------------+
+| employee_id | device_id    | username | department | office      |
++-------------+--------------+----------+------------+-------------+
+|        1003 | d394e816f943 | sgilmore | Finance    | South-153   |
+|        1007 | h174i497j413 | wjaffrey | Finance    | North-406   |
+|        1008 | i858j583k571 | abernard | Finance    | South-170   |
+|        1009 | NULL         | lrodriqu | Sales      | South-134   |
+
+
+Finally, you’ll obtain information about employees who are not in the Information Technology department.
+
+SELECT * FROM employees WHERE NOT department = "Information Technology";
++-------------+--------------+----------+-----------------+-------------+
+| employee_id | device_id    | username | department      | office      |
++-------------+--------------+----------+-----------------+-------------+
+|        1000 | a320b137c219 | elarson  | Marketing       | East-170    |
+
+
+
+--
+Activity 5:
+First, you’ll retrieve login events made after '2022-05-09'
+
+ SELECT * FROM log_in_attempts WHERE login_date > "2022-05-09";
++----------+----------+------------+------------+---------+-----------------+---------+
+| event_id | username | login_date | login_time | country | ip_address      | success |
++----------+----------+------------+------------+---------+-----------------+---------+
+|        2 | apatel   | 2022-05-10 | 20:27:27   | CAN     | 192.168.205.12  |       0
+
+
+Second, you’ll narrow the focus of the search to filter logins in a date range. 
+Login attempts made between '2022-05-09' and '2022-05-11'
+
+SELECT * FROM log_in_attempts WHERE login_date BETWEEN "2022-05-09" AND "2022-05-11";
++----------+----------+------------+------------+---------+-----------------+---------+
+| event_id | username | login_date | login_time | country | ip_address      | success |
++----------+----------+------------+------------+---------+-----------------+---------+
+|        1 | jrafael  | 2022-05-09 | 04:56:27   | CAN     | 192.168.243.140 |       1
+
+
+Modify the query to return only login attempts with event_id between 100 and 150.
+What is the username of the seventh result returned by your query
+
+SELECT * FROM log_in_attempts WHERE event_id BETWEEN 100 AND 150 
+    -> Limit 7;
++----------+----------+------------+------------+---------+-----------------+---------+
+| event_id | username | login_date | login_time | country | ip_address      | success |
++----------+----------+------------+------------+---------+-----------------+---------+
+|      100 | tmitchel | 2022-05-12 | 16:02:03   | MEXICO  | 192.168.97.225  |       0 |
+|      101 | sbaelish | 2022-05-08 | 12:01:22   | US      | 192.168.145.158 |       0 |
+|      102 | jreckley | 2022-05-09 | 16:51:44   | MEX     | 192.168.108.13  |       1 |
+|      103 | jhill    | 2022-05-11 | 09:10:54   | US      | 192.168.60.153  |       0 |
+|      104 | asundara | 2022-05-11 | 18:38:07   | US      | 192.168.96.200  |       0 |
+|      105 | cjackson | 2022-05-12 | 19:36:42   | CAN     | 192.168.247.153 |       1 |
+|      106 | tmitchel | 2022-05-12 | 06:15:41   | MEXICO  | 192.168.3.252   |       1
+
+
+
+
+
+
+
+
+
+
