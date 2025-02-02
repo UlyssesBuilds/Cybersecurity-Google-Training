@@ -1,3 +1,4 @@
+SQL challenges that ramp up using filters, operators and Join 
 Task 1. Retrieve employee device data
 
 SELECT *
@@ -136,3 +137,51 @@ SELECT * FROM employees WHERE office like "South%";
 +----------+----------+------------+------------+---------+-----------------+---------+
 |      117 | bsand    | 2022-05-08 | 00:19:11   | USA     | 192.168.197.187 |       0 |
 |       92 | pwashing | 2022-05-08 | 00:36:12   | US      | 192.168.247.219 |       0 |
+
+
+
+-
+Activity 3
+First, you’ll retrieve login events made after a certain date.
+retrieve data for login attempts made after '2022-05-09'
+SELECT * 
+FROM log_in_attempts 
+WHERE login_date > "2022-05-09";
++----------+----------+------------+------------+---------+-----------------+---------+
+| event_id | username | login_date | login_time | country | ip_address      | success |
++----------+----------+------------+------------+---------+-----------------+---------+
+|        2 | apatel   | 2022-05-10 | 20:27:27   | CAN     | 192.168.205.12  |       0
+
+
+Second, you’ll narrow the focus of the search to filter logins in a date range. 
+ Use the BETWEEN and AND operators to return results between '2022-05-09' and '2022-05-11'
+
+SELECT * FROM log_in_attempts WHERE login_Date BETWEEN "2022-05-09" AND "2022-05-11";
++----------+----------+------------+------------+---------+-----------------+---------+
+| event_id | username | login_date | login_time | country | ip_address      | success |
++----------+----------+------------+------------+---------+-----------------+---------+
+|        1 | jrafael  | 2022-05-09 | 04:56:27   | CAN     | 192.168.243.140 |       1
+
+
+Third, you’ll investigate logins that were made at certain times. 
+What time was the earliest login attempt between 06:00:00 and 07:00:00?
+
+SELECT * FROM log_in_attempts WHERE login_time BETWEEN "06:00:00" AND "07:00:00" 
+    -> ORDER BY login_time;
++----------+----------+------------+------------+---------+-----------------+---------+
+| event_id | username | login_date | login_time | country | ip_address      | success |
++----------+----------+------------+------------+---------+-----------------+---------+
+|      182 | lyamamot | 2022-05-10 | 06:01:31   | USA     | 192.168.106.52  |       0
+
+Finally, you’ll filter login attempts based on their event IDs.
+return only the event_id, username, and login_date fields from the log_in_attempts table.
+
+Write a query to return login attempts with event_id greater than or equal to 100.
+SELECT event_id, username, login_date FROM log_in_attempts WHERE event_id >= 100;
++----------+----------+------------+
+| event_id | username | login_date |
++----------+----------+------------+
+|      100 | tmitchel | 2022-05-12 |
+|      101 | sbaelish | 2022-05-08 |
+|      102 | jreckley | 2022-05-09 |
+
