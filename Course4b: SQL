@@ -50,8 +50,13 @@ FROM customers
 ORDER BY country, city;
 
 ---
+JOIN
 
+INNER JOIN: overalapping info
+LEft JOIN: all of the items in the left and overallping info
 
+INNER JOIN table
+ON key.table = key.table
 
 
 
