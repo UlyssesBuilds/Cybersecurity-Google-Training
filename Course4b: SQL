@@ -54,13 +54,23 @@ JOIN
 
 INNER JOIN: overalapping info
 LEft JOIN: all of the items in the left and overallping info
+FULL Outer JOIN: return all records from both tables
 
-INNER JOIN table
-ON key.table = key.table
+NULl is returned if there are no values
 
+SELECT *
+FROM LEFTTABLE
+INNER JOIN RIGHTtable
+ON table.key = table.key
 
+--
+Aggregate: place the keyword for it after the SELECT keyword, and then in parentheses, indicate the column you want to perform the calculation on
+Count
+AVG
+SUM
 
-
+SELECT COUNT(firstname)
+FROM customers;
 
 
 
