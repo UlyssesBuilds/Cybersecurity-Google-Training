@@ -205,17 +205,26 @@ Session ID:
  Helps prevent attackers from obtaining sensitive data by maintaining the user's session securely.
 Session Hijacking:
 A type of attack where an attacker can impersonate the user by stealing and using the session token.
+-
+IAM (identify Access Managment): collection of processes and technologies that helps organizations manage digital identities in their environment. 
+similar to AAA as it is designed to authenticate users, determine their access privileges, and track their activities within a system.
 
 
+right user is granted access to the right resources at the right time and for the right reasons
+Each of those four factors is determined by your organization's policies and processes.
 
+authentication needs
+User provisioning is the process of creating and maintaining a user's digital identity. 
+Security analysts are routinely involved with provisioning users and their access privileges.
 
+Granting authorization
+If the right user has been authenticated, the network should ensure the right resources are made available. There are three common frameworks that organizations use to handle this step of IAM:
 
+Mandatory access control (MAC)
 
+Discretionary access control (DAC)
 
-
-
-
-
+Role-based access control (RBAC)
 
 
 
