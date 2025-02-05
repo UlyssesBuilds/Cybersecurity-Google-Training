@@ -1,0 +1,78 @@
+Caesar cipher: Introduced as a fun, basic encryption method.
+openssl step: The actual decryption process of the AES-encrypted file, but you needed the key (hidden in the cipher text) before you could use it.
+--
+
+analyst@b1690a151ebd:~$ ls
+Q1.encrypted  README.txt  caesar
+analyst@b1690a151ebd:~$ pwd
+/home/analyst
+analyst@b1690a151ebd:~$ cat readme.txt
+cat: readme.txt: No such file or directory
+analyst@b1690a151ebd:~$ cat README.txtr
+cat: README.txtr: No such file or directory
+analyst@b1690a151ebd:~$ cat README.txt 
+Hello,
+All of your data has been encrypted. To recover your data, you will need to solve a cipher. To get started look for a hidden file in the caesar subdirectory.
+
+
+analyst@b1690a151ebd:~$ cd caesar
+analyst@b1690a151ebd:~/caesar$ ls -a
+.  ..  .leftShift3
+analyst@b1690a151ebd:~/caesar$ cat .
+cat: .: Is a directory
+analyst@b1690a151ebd:~/caesar$ cat .leftshift3
+cat: .leftshift3: No such file or directory
+analyst@b1690a151ebd:~/caesar$ cat .leftShift3
+Lq rughu wr uhfryhu brxu ilohv brx zloo qhhg wr hqwhu wkh iroorzlqj frppdqg:
+
+rshqvvo dhv-256-fef -sengi2 -d -g -lq T1.hqfubswhg -rxw T1.uhfryhuhg -n hwwxeuxwh
+
+--
+Data has been encrypted using a Caesar cipher. This can be solved by shifting each alphabet character to the left or right by a fixed number of spaces. 
+tr (translate): <char to be replaced> <replacement char>
+
+echo "ac" | tr "abcd" "pqrs"
+Step-by-step Execution:
+The input string is "ac".
+The mapping provided is:
+'a' → 'p'
+'b' → 'q'
+'c' → 'r'
+'d' → 's'
+In "ac",
+'a' gets replaced by 'p'
+'c' gets replaced by 'r'
+Output: "pr"
+
+d-z (lowercase) + a-c (lowercase) → shifts letters backward by 3.
+D-Z (uppercase) + A-C (uppercase) → shifts uppercase letters backward by 3.
+--
+
+
+analyst@b1690a151ebd:~/caesar$ cat .leftShift3 | tr "d-za-cD-ZA-C" "a-zA-Z"
+In order to recover your files you will need to enter the following command:
+
+openssl aes-256-cbc -pbkdf2 -a -d -in Q1.encrypted -out Q1.recovered -k ettubrute
+
+
+-
+analyst@b1690a151ebd:~/caesar$ cd ~
+analyst@b1690a151ebd:~$ ls  
+Q1.encrypted  README.txt  caesar
+analyst@b1690a151ebd:~$ cat Q1.encrypted
+U2FsdGVkX1/nxHZY2p53/6gRmQ9alkNrVwOwPOgpTeB09rdnvKnydLPQsnOYHjgR
+42Mwdv0ye94Im+u100Fl2+Bx3SHjJ7wZjOxA7Jew1x7g3LcRsRnFcFLyfAnn0f3u
+xMIH/y+Y4HfVb6NUFueXM43M5Cn/Gz9JqIxpw+tZaajsrtZrsoEwenZEND1Ya6AY
+rnVCjCFdTmSVG9EnzGxFT40DOw0yIhEAw5WqfBzjwgNSfz+p44Bnb3jUHsJt38gw
+
+analyst@b1690a151ebd:~$ openssl aes-256-cbc -pbkdf2 -a -d -in Q1.encrypted -out Q1.recovered -k ettubrute
+--
+openssl command reverses the encryption of the file with a secure symmetric cipher, as indicated by AES-256-CBC. 
+The -pbkdf2 option is used to add extra security to the key, and -a indicates the desired encoding for the output. 
+The -d indicates decrypting, while -in specifies the input file and -out specifies the output file. The -k specifies the password, which in this example is ettubrute.
+--
+analyst@b1690a151ebd:~$ lsQ1.encrypted  Q1.recovered  README.txt  caesar
+analyst@b1690a151ebd:~$ cat Q1.recoveredIf you are able to read this, then you have successfully decrypted the classic cipher text. 
+You recovered the encryption key that was used to encrypt this file. Great work!
+
+
