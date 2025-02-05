@@ -50,19 +50,41 @@ Cipher: an algorithm that encrypts information
 
 Symmetric encryption is the use of a single secret key to exchange information. 
   Because it uses one key for encryption and decryption, the sender and receiver must know the secret key to lock or unlock the cipher.
+  - requires a secure way to share the key between sender and receiver
+  - faster and efficient for large amounts of data
+ > Triple DES (3DES): applies DES encryption x3 for enhances security (168 bit key)
+ > AES (Advanced Encryption Standards) uses 128, 192, or 256-bit keys
+
 Asymmetric encryption is the use of a public and private key pair for encryption and decryption of data. 
-  It uses two separate keys: a public key and a private key. The public key is used to encrypt data, and the private key decrypts it. 
-  The private key is only given to users with authorized access CA(Certicate Authority)
+  Public key is used to encrypt data, and the private key decrypts it. 
+  CA (Certificare Authority) issues digital certificates, which verify the identity of a user or website and contain the public key
+  private key is securely generated and stored by the recipient.
+  > RSA
 
+🔹 Public Key (🔓) → Open, shared freely, only encrypts data
+🔹 Private Key (🔑) → Secret, stays with the bank, only decrypts data (never sent over the internet)
 
-
+> Symmetric encryption: The encryption key must be shared between sender and receiver
+    An attacker could intercepts the key during transmission and can decrypt everything
+[
+1️⃣ Browser requests a secure connection (https://)
+2️⃣ Server sends RSA public key (verified by a CA)
+3️⃣ Browser generates a random AES key
+4️⃣ AES key is encrypted using RSA public key
+5️⃣ Encrypted AES key is sent to the server
+6️⃣ Server decrypts AES key with its RSA private key]
+-
 Generating keys
 These algorithms must be implemented when an organization chooses one to protect their data. 
-One way this is done is using OpenSSL, which is an open-source command line tool that can be used to generate public and private keys. 
-OpenSSL is commonly used by computers to verify digital certificates that are exchanged as part of public key infrastructure.
+OpenSSL is an open-source command-line tool. It generates public & private keys for encryption.
+Also used to verify digital certificates in Public Key Infrastructure (PKI) (e.g., HTTPS, SSL/TLS).
 
-Obscurity is not security: cryptography should be designed in such a way that all the details of an algorithm—except for the private key—should be 
-knowable without sacrificing its security. For example, you can access all the details about how AES encryption works online and yet it is still unbreakable.
+Obscurity is not security: A strong algorithm should remain secure even if its details are public—only the private key must be secret.
+
+
+
+
+
 
 
 
