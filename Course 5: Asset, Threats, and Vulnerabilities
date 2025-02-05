@@ -80,12 +80,42 @@ OpenSSL is an open-source command-line tool. It generates public & private keys 
 Also used to verify digital certificates in Public Key Infrastructure (PKI) (e.g., HTTPS, SSL/TLS).
 
 Obscurity is not security: A strong algorithm should remain secure even if its details are public—only the private key must be secret.
+-
+keys are vulnerable to getting lost and stolen
+
+Hash function: One-way encryption that produces a fixed-size hash value; cannot be decrypted.
+ Even a small change in input produces a completely different hash, making it ideal for data integrity checks.
+ Each input is then first hashed then Hash values are compared (which can be quickly done by computers)
+accomplished authentication and non-repudiation (information authenticity cannot be denied)
 
 
+Hash Collisions
+Hash collisions: Occur when different inputs produce the same hash value, posing a security risk (e.g., impersonation).
+  Hash algorithms map any input, regardless of its length, into a fixed-size value of letters and numbers since there’s only a finite set of available outputs!
+> Because hashes are used for authentication, a hash collision is similar to copying someone’s identity. 
+>> Attackers can carry out collision attacks to fraudulently impersonate authentic data.
 
+longer hashes is more secure: SHA (Secure Hashing Alogrithm) family
+Numbers besides each SHA function indicate the size of its hash value in bits. Except for SHA-1, which produces a 160-bit digest (NIST approved)
+Five functions make up the SHA family of algorithms:
 
+SHA-1
+SHA-224
+SHA-256
+SHA-384
+SHA-512
 
+Secure password storage: Passwords are hashed and stored; comparison is done with the hashed value to verify authenticity.
+These are secured even if the data base is compromised due to hashing
 
+Rainbow tables
+A rainbow table is a file of pre-generated hash values and their associated plaintext. 
+Hackers use them
+
+Salting is an additional safeguard that's used to strengthen hash functions. 
+A salt is a random string of characters that's added to data before it's hashed. The additional characters produce a more unique hash value, making salted data resilient to rainbow table attacks.
+
+virusTotal
 
 
 
