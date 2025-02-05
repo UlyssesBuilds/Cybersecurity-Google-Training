@@ -8,6 +8,10 @@ Threat – A potential danger to an asset (e.g., hackers, malware, insider threa
 Vulnerability – A weakness that can be exploited (e.g., outdated software, weak passwords).
 
 
+We can safeguard this inforamtion via encryption
+Access control: who has access
+
+
 
 B. Encryption & Data Protection
 Encryption: Converts data into unreadable code (AES-256 is industry standard).
@@ -116,8 +120,91 @@ Salting is an additional safeguard that's used to strengthen hash functions.
 A salt is a random string of characters that's added to data before it's hashed. The additional characters produce a more unique hash value, making salted data resilient to rainbow table attacks.
 
 virusTotal
+--
+Module 2: Authentication, Authorization, And Accounting
+
+Managing who or what has access to information
+Access Control: Security controls that manage who can access what, ensuring:
+✔️ Confidentiality – Protecting sensitive information.
+✔️ Integrity – Preventing unauthorized modifications.
+✔️ Availability – Ensuring users can access what they need.
+
+It is broken down by the AAA framework (authentication, authorization, accounting)
+Authentication → Who are you? (Verifying identity)
+Authorization → What can you access? (Permissions)
+Accounting → What did you do? (Logging & tracking)
+
+-
+Authentication
+SSO 
+A technology that combines multiple logins into one, allowing users to access several applications with a single authentication process.
+✔️ Better User Experience: No need to remember multiple passwords.
+✔️ Stronger Security: Reduces attack surfaces by centralizing authentication.
+✔️ Cost Efficiency: Simplifies IT management & lowers password reset costs.
+✔️ Prevents Password Fatigue: Users don’t reuse weak passwords across multiple sites.
+
+Security Features of SSO
+✔️ Centralized Authentication: Only one secure login instead of many weak passwords.
+✔️ Reduces Phishing Risks: Users log in less often, reducing the chance of falling for fake login pages.
+✔️ Uses Secure Tokens Instead of Passwords: Applications don’t store passwords—only trust temporary tokens issued by the IdP.
+✔️ Supports Multi-Factor Authentication (MFA): Can add extra layers (e.g., SMS codes, biometrics, security keys).
+
+How SSO Works (Step-by-Step)
+1️⃣ User Requests Access
+You enter credentials (username & password) on a site (e.g., Gmail).
+Instead of Gmail verifying them, it redirects you to an Identity Provider (IdP) (e.g., Google’s authentication system).
+2️⃣ Identity Provider Verifies Your Identity
+IdP checks your credentials & confirms who you are.
+If correct, the IdP issues an encrypted token containing your authentication details.
+3️⃣ Token Sent to the Service Provider (SP)
+Gmail (the Service Provider) receives this secure token from the IdP.
+Instead of storing or handling your password, Gmail trusts the IdP’s verification.
+4️⃣ Access Granted Across Services
+Now, when you visit Google Drive or YouTube, they reuse the existing token instead of asking for a password again.
+
+Limitations of SSO & How to Mitigate Risks
+❌ Single Point of Failure: If an attacker gets your SSO password, they can access everything.
+✔️ Solution: Use Multi-Factor Authentication (MFA) to add another layer of security.
+
+❌ Remote Access Risks: Cloud-based SSO can be harder to secure for remote users.
+✔️ Solution: Implement Zero Trust Security (always verify, never assume trust).
 
 
+-
+Authorization
+Linked to two security princples:
+Least privledge: access only last as long as needed
+Seperation of duties: principle that users shuold not be given level of authrization that would allow them to misuse a systems
+
+Continuing on SSO, authorization over web pages is controlled by auth protocols
+HTTP uses basic auth
+ technology used to establish a use's request to acess a server
+ sends an identifier every time a user commuincates with a web page
+ > transmit username and passwords openly so is vulnerable
+HTTPS uses O Auth
+ Open standard authorization protocol that shares designated access between application
+ > uses API token to verify access between you and the service provider rather than passwords
+     Tokens Replace Passwords
+     Tokens Expire & Can Be Revoked
+     Tokens Are Limited in Scope (oyu can read these files but can't delete them)
+-
+Auditing
+Monitoring the access logs of systems
+- who accessed the system
+- when they accessed the system
+- what resources they used
+> identify trends and uncover malicious activity, finding data breach
+
+User Access System
+ Session Creation: When a user logs in, a sequence of authentication requests and responses is triggered, capturing the moment the user enters and exits the system.
+Session Cookie:
+ A temporary data file stored in the browser.
+ Contains a session ID—a unique token that tracks your login session on a website.
+Session ID:
+ The unique token that identifies the user and their device during the session.
+ Helps prevent attackers from obtaining sensitive data by maintaining the user's session securely.
+Session Hijacking:
+A type of attack where an attacker can impersonate the user by stealing and using the session token.
 
 
 
