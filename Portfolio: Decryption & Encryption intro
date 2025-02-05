@@ -76,3 +76,46 @@ analyst@b1690a151ebd:~$ cat Q1.recoveredIf you are able to read this, then you h
 You recovered the encryption key that was used to encrypt this file. Great work!
 
 
+----
+Activity 2
+As a security analyst, you’ll need to implement security controls to protect organizations against a range of threats.
+we’ll create hash values for two files and use Linux commands to manually examine the differences.
+
+analyst@a95a51a32c6c:~$ ls
+file1.txt  file2.txt
+
+analyst@a95a51a32c6c:~$ cat file1.txt
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+analyst@a95a51a32c6c:~$ cat file2.txt
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+
+9sxa5Yq20Ranalyst@a95a51a32c6c:~$ sha256sum file1.txt
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+analyst@a95a51a32c6c:~$ sha256sum file2.txt
+2558ba9a4cad1e69804ce03aa2a029526179a91a5e38cb723320e83af9ca017b  file2.txt
+--
+We see that the hash shows two different outputs showcasing that they are different
+files even though the initial message at first glance seemed the same.
+One must be structually different
+--
+analyst@a95a51a32c6c:~$ sha265 file1.txt >> file1hash
+-bash: sha265: command not found
+analyst@a95a51a32c6c:~$ sha256 file1.txt >> file1hash
+-bash: sha256: command not found
+analyst@a95a51a32c6c:~$ sha256sum file1.txt >> file1hash
+analyst@a95a51a32c6c:~$ sha256sum file2.txt >> file2hash
+
+analyst@a95a51a32c6c:~$ ls
+file1.txt  file1hash  file2.txt  file2hash
+analyst@a95a51a32c6c:~$ cmp file1hash file2hash
+file1hash file2hash differ: char 1, line 1
+analyst@a95a51a32c6c:~$ 
+
+
+
+
+
+
+
+
+
