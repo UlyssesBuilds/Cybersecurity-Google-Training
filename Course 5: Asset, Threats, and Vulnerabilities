@@ -369,7 +369,32 @@ All of the skills you’re learning in this program can help you advance towards
 Bug bounty programs
 Organizations commonly run bug bounty programs which offer freelance pen testers financial rewards for finding and reporting vulnerabilities in their products.
 Bug bounties are great opportunities for amateur security professionals to participate and grow their skills. 
+-
+Cyber Attack Mindset
 
+Get a sense of the attack surface and the enviroment around it
+
+
+physical attack ksurface
+people and their devices have:
+- internal threat
+- external threat
+
+Advanced Persistent Threats (APT):
+Definition: APTs involve long-term, stealthy unauthorized access to systems, often by state-sponsored actors or nation-states.
+Targets: Can target both government agencies and private organizations, sometimes starting with private entities to reach larger, more sensitive targets.
+
+Key Attack Vectors:
+Direct Access: Physical access to a system.
+Removable Media: Portable hardware like USB drives.
+Social Media: Platforms for communication and content sharing.
+Email: Personal and business accounts.
+Wireless Networks: On-premises networks.
+Cloud Services: Third-party cloud providers.
+Supply Chains: Third-party vendors providing backdoor acces
+
+As a security professional, it’s important to understand why someone would pose a threat to organizational assets. 
+This includes recognizing that every threat actor isn’t intentionally out to cause harm.
 
 
 
