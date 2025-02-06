@@ -1,0 +1,58 @@
+Scenario:
+You are a newly hired cybersecurity analyst for an e-commerce company. 
+The company stores information on a remote database server, since many of the employees work remotely from locations all around the world. 
+Employees of the company regularly query, or request, data from the server to find potential customers. 
+The database has been open to the public since the company's launch three years ago. 
+As a cybersecurity professional, you recognize that keeping the database server open to the public is a serious vulnerability.
+
+--
+Vulnerability Assessment Report
+5th February 2025
+
+System Description
+The server hardware consists of a powerful CPU processor and 128GB of memory. 
+It runs on the latest version of Linux operating system and hosts a MySQL database management system. 
+It is configured with a stable network connection using IPv4 addresses and interacts with other servers on the network. 
+Security measures include SSL/TLS encrypted connections.
+
+Scope
+The scope of this vulnerability assessment relates to the current access controls of the system. 
+The assessment will cover a period of three months, from November 2025 to Febraury 2025. 
+NIST SP 800-30 Rev. 1 is used to guide the risk analysis of the information system.
+
+Purpose
+Exposing a data server to the public represents a critical vulnerability. 
+Given the high likelihood and potential damage from a successful attack, 
+the exposure could lead to significant financial losses, loss of customer trust, and severe reputational damage.
+The database contains sensitive business information, which is pivotal to revenue generation. 
+Consequently, securing this database is paramount to maintaining the integrity and success of the business.
+
+Risk Assesment
+Threat Source  Threat Event                                  Likelihood  Severity  Risk
+Hacker         Obtain sensitive information via exltration   3            3        9
+Customer       Disrupt mission-critical operations.          2            3        6
+Employee       Obfuscate future attacks.                     1            3        3
+
+Legend:
+Likelihood Scale: 1 (Low) - 3 (High)
+Severity Scale: 1 (Low) - 3 (High)
+Risk: Likelihood x Severity
+
+Approach
+The risks were assessed by analyzing the data storage and management methods utilized by the business. 
+The threat events were scaled based on their likelihood and severity, considering their potential impact on day-to-day operations. 
+The likelihood of occurrence and the severity of impact were evaluated in relation to the operational requirements of the organization.
+
+Remeditation Strategy:
+To mitigate the identified risks, the following remediation strategy is proposed:
+Implementation of AAA Framework (Authentication, Authorization, and Auditing):
+  - Authentication: Enhance security by implementing Multi-Factor Authentication (MFA) to confirm the identity of users and prevent unauthorized access.
+  - Authorization: Employ Role-Based Access Control (RBAC) to ensure that individuals only have access to data relevant to their responsibilities.
+  - Auditing: Regularly monitor and log access activities to the database to track who is accessing the data, when, and for what purpose. 
+This will facilitate the identification of any unauthorized access or suspicious activities.
+
+IP Allow Listing for Firewalls:
+  Restrict access to the database by allowing connections only from trusted IP addresses, thereby reducing the potential attack surface from unauthorized network sources.
+Continuous Monitoring and Evaluation:
+  Maintain ongoing surveillance of the database and its access logs to promptly detect and respond to any potential security incidents.
+By implementing these measures, the organization can significantly reduce the risk of unauthorized access, data breaches, and operational disruptions, thereby safeguarding the integrity of the critical data and ensuring business continuity.
