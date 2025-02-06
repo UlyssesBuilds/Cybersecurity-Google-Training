@@ -221,16 +221,22 @@ Granting authorization
 If the right user has been authenticated, the network should ensure the right resources are made available. There are three common frameworks that organizations use to handle this step of IAM:
 
 Mandatory access control (MAC)
-
+ Strict need to know basis. Access to infroamtion must be granted manually by a central authority (like system admin)
+ Commonly applied in law enforcement, military where there is a chain of comman.
+ (non discretionary: because access isn’t given at the discretion of the data owner)
 Discretionary access control (DAC)
-
+ Data owner can decide appropriate levels of access
+ (when I crete google docs I am the data owner and can decide who can view, edit, share)
 Role-based access control (RBAC)
+ authorization is determined by a user's role within an organization.
+
+Access control technologies are configured to work together and creat a seamless experience.
+
+An organization's IT department sometimes develops and maintains customized access control technologies on their own. A typical IAM or AAA system consists of a user directory, a set of tools for managing data in that directory, an authorization system, and an auditing system. 
+Some organizations create custom systems to tailor them to their security needs. However, building an in-house solution comes at a steep cost of time and other resources.
 
 
-
-
-
-
+Instead, many organizations opt to license third-party solutions that offer a suite of tools that enable them to quickly secure their information systems
 
 
 
