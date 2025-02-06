@@ -206,37 +206,118 @@ Session ID:
 Session Hijacking:
 A type of attack where an attacker can impersonate the user by stealing and using the session token.
 -
-IAM (identify Access Managment): collection of processes and technologies that helps organizations manage digital identities in their environment. 
-similar to AAA as it is designed to authenticate users, determine their access privileges, and track their activities within a system.
+IAM (identify Access Managment): strategy framework that helps organizations manage digital identities in their environment. 
+This is the overarching idea that we just learned
+
+Authorization frameworks:
+1. Mandatory access control (MAC)
+   Strict need to know basis. Access to infroamtion must be granted manually by a central authority (like system admin)
+   Commonly applied in law enforcement, military where there is a chain of comman.
+   (non discretionary: because access isn’t given at the discretion of the data owner)
+2. Discretionary access control (DAC)
+  Data owner can decide appropriate levels of access
+  (when I crete google docs I am the data owner and can decide who can view, edit, share)
+3. Role-based access control (RBAC)
+     authorization is determined by a user's role within an organization.
+
+IT departments may develop custom IAM/AAA systems tailored to security needs, including a user directory, data management tools, authorization, and auditing.
+Custom systems are costly in terms of time and resources.
+Many organizations prefer to license third-party IAM solutions that provide a complete suite of tools for quickly securing information systems.
+-
+Moudel 3: vulnerabilities
+
+Vulernability managamnet
+CVE list
+Attack surface
+Common attack vectors
 
 
-right user is granted access to the right resources at the right time and for the right reasons
-Each of those four factors is determined by your organization's policies and processes.
+Vulernability weakness that can be exploited by a threat
+Finding vulnerabilities by thinking of the exploits
 
-authentication needs
-User provisioning is the process of creating and maintaining a user's digital identity. 
-Security analysts are routinely involved with provisioning users and their access privileges.
+Vulernability managamnet:
+finding and patching vulnerabilities by thinking of exploits in thius cycle
+1. identify
+2. consider potential exploit of them
+3. Prepare defenses against threat
+4. evaluate the defenses
 
-Granting authorization
-If the right user has been authenticated, the network should ensure the right resources are made available. There are three common frameworks that organizations use to handle this step of IAM:
+zero day exploits: newly discovered explot with zero days to fix it
+- new form of spyware
 
-Mandatory access control (MAC)
- Strict need to know basis. Access to infroamtion must be granted manually by a central authority (like system admin)
- Commonly applied in law enforcement, military where there is a chain of comman.
- (non discretionary: because access isn’t given at the discretion of the data owner)
-Discretionary access control (DAC)
- Data owner can decide appropriate levels of access
- (when I crete google docs I am the data owner and can decide who can view, edit, share)
-Role-based access control (RBAC)
- authorization is determined by a user's role within an organization.
-
-Access control technologies are configured to work together and creat a seamless experience.
-
-An organization's IT department sometimes develops and maintains customized access control technologies on their own. A typical IAM or AAA system consists of a user directory, a set of tools for managing data in that directory, an authorization system, and an auditing system. 
-Some organizations create custom systems to tailor them to their security needs. However, building an in-house solution comes at a steep cost of time and other resources.
+Defense in depth: layered approach to vulnerability managment
+1. Perimieter layer
+2. Network Layer
+3. End point
+4. Application layer
+5. Data layer, can be further brokwn down by asset classification 
 
 
-Instead, many organizations opt to license third-party solutions that offer a suite of tools that enable them to quickly secure their information systems
+-
+Online documentary of common vulnerabilties and exposure
+
+CVE list
+OWASP 10
+Open Source intelligence
+
+
+CVE (Common Vulnerabilities and Exposures)
+ Created by MITRE Corp: Standardizes the categorization and identification of security vulnerabilities.
+ CNA (CVE Numbering Authorities): Independently test vulnerabilities based on specific criteria:
+   1. Independent of other issues: Fixing one issue should not require fixing another.
+   2. Recognized security risk: Vulnerability must be a potential security risk.
+   3. Supporting evidence: Evidence of the vulnerability must be submitted.
+   4. Single codebase: Should only affect one specific codebase.
+CVSS (Common Vulnerability Scoring System): Scores the severity of vulnerabilities to help prioritize fixes.
+  Below 4.0: Low risk.
+  Above 9.0: Critical and should be addressed immediately.
+Purpose: CVE and CVSS are tools for vulnerability management, helping organizations prioritize which vulnerabilities to patch based on severity.
+
+-
+OWASP Top 10
+The OWASP Top 10 highlights the 10 most targeted web application vulnerabilities, guiding businesses to design more secure software and prioritize security measures in their code.
+
+Broken Access Control: Failure to restrict users from performing unauthorized actions (e.g., deleting articles or accessing restricted data).
+Cryptographic Failures: Insufficient encryption, such as using weak algorithms (e.g., MD5), putting sensitive data at risk.
+Injection: Malicious code inserted into an application, which can manipulate its behavior, e.g., SQL injection or XSS attacks.
+Insecure Design: Applications not designed with security in mind, making them vulnerable to attacks.
+Security Misconfiguration: Security settings not properly configured (e.g., default settings), making systems vulnerable.
+Vulnerable and Outdated Components: Using outdated software libraries or components that have known vulnerabilities.
+Identification and Authentication Failures: Weaknesses in the process of verifying user identities or securing access to sensitive resources.
+Software and Data Integrity Failures: Insufficient review of patches and updates, potentially introducing vulnerabilities.
+Security Logging and Monitoring Failures: Lack of proper logging and monitoring, making it difficult to detect and respond to attacks.
+Server-Side Request Forgery (SSRF): Exploiting a server's functionality to send unauthorized requests to other resources, potentially leaking sensitive data.
+Purpose: The OWASP Top 10 serves to increase awareness of critical security issues and help businesses prevent and fix common vulnerabilities in web applications.
+
+-
+Open Source Intelligence (OSINT)
+OSINT refers to collecting and analyzing publicly available data to gain actionable insights. It is widely used in cybersecurity for proactive defense.
+
+Key Uses of OSINT:
+Provide insights into cyber attacks: Monitoring online activity to spot emerging attack trends or threats.
+Detect data exposures: Identifying potential data leaks, like exposed sensitive information in public databases.
+Evaluate existing defenses: Assessing security measures through public data to check for weaknesses.
+Identify unknown vulnerabilities: Finding vulnerabilities that may not be widely known by gathering information from various sources, including forums and hacker communities.
+Purpose: OSINT helps organizations stay aware of potential security threats, vulnerabilities, and emerging attack methods, enabling quick responses and proactive security measures.
+
+
+Vulnerability: weakness in a system that can be threatnening
+Exploit: when vulnerability is abused
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
