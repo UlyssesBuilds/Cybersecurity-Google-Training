@@ -246,11 +246,11 @@ zero day exploits: newly discovered explot with zero days to fix it
 - new form of spyware
 
 Defense in depth: layered approach to vulnerability managment
-1. Perimieter layer
-2. Network Layer
-3. End point
-4. Application layer
-5. Data layer, can be further brokwn down by asset classification 
+1. Perimieter layer: outermost layer
+2. Network Layer: Protect internal network traffic and communication between devices
+3. End point: computers - protecting against unauthorized access
+4. Application layer: secure application
+5. Data layer, can be further brokwn down by asset classification: semsitive data stored in endpoint 
 
 
 -
@@ -395,8 +395,90 @@ Supply Chains: Third-party vendors providing backdoor acces
 
 As a security professional, it’s important to understand why someone would pose a threat to organizational assets. 
 This includes recognizing that every threat actor isn’t intentionally out to cause harm.
+-
+
+Attack vector: The specific method or pathway an attacker uses to exploit a vulnerability.
+Attack surface: total set of potential points where an attacker can try to gain unauthorized access or cause harm.
+
+Identify a target
+determine how the target can be accessed
+evaluate attack vectors
+find the tools of method of acttack
+
+defending
+educate
+least privledges
+using right security tools
+Building a devierse security team
+
+Fortify against brute force cyber attacks
 
 
+Dictionary attacks are a similar technique except in these instances attackers use a list of commonly used credentials to access a system. This list is similar to matching a definition to a word in a dictionary.
+
+Reverse brute force attacks are similar to dictionary attacks, except they start with a single credential and try it in various systems until a match is found.
+
+Credential stuffing is a tactic in which attackers use stolen login credentials from previous data breaches to access user accounts at another organization. A specialized type of credential stuffing is called pass the hash. 
+These attacks reuse stolen, unsalted hashed credentials to trick an authentication system into creating a new authenticated user session on the network.
+Note: Besides access credentials, encrypted information can sometimes be brute forced using a technique known as exhaustive key search.
+
+tool cracking
+Aircrack-ng
+Hashcat 
+John the Ripper
+Ophcrack
+THC Hydra
+---
+Module 4: 
+
+
+social engineering
+malware
+web based exploit
+threat model process
+
+social engineering: lead to people forgoing polices, standards and procedures of processes with manipulation
+prepare: gather
+information
+establish trust
+Persuasion tactics: sometimes using vocabulary that makes them sound like a member
+Disconnect from the target
+
+prevention:
+implementing managerail controls
+staying informed of trends
+share information 
+
+
+These are common types of social engineering to watch out for:
+
+Baiting is a social engineering tactic that tempts people into compromising their security. A common example is USB baiting that relies on someone finding an infected USB drive and plugging it into their device.
+
+Phishing is the use of digital communications to trick people into revealing sensitive data or deploying malicious software. It is one of the most common forms of social engineering, typically performed via email.
+
+Quid pro quo is a type of baiting used to trick someone into believing that they’ll be rewarded in return for sharing access, information, or money. For example, an attacker might impersonate a loan officer at a bank and call customers offering them a lower interest rate on their credit card. They'll tell the customers that they simply need to provide their account details to claim the deal.
+
+Tailgating is a social engineering tactic in which unauthorized people follow an authorized person into a restricted area. This technique is also sometimes referred to as piggybacking.
+
+Watering hole is a type of attack when a threat actor compromises a website frequently visited by a specific group of users. Oftentimes, these watering hole sites are infected with malicious software. An example is the Holy Water attack of 2020 that infected various religious, charity, and volunteer websites
+
+doing the most amount of damage with the least amount of effort
+phising
+phising kit to easily launch without technical skills 
+
+malicious attachment
+fake adata collection forms
+fraudulent web links
+
+smishing: impersonating
+vishing: impersonate via voice
+
+
+phising prevention
+anti phising polices
+employee training
+email access list
+intrusion prevention detection
 
 
 
