@@ -429,64 +429,116 @@ John the Ripper
 Ophcrack
 THC Hydra
 ---
-Module 4: 
+Module 4: Common threats
+
+Social Engineering in Cybersecurity
+Social engineering is a manipulation technique used to trick people into bypassing security policies, standards, and procedures. 
+Attackers often exploit human psychology to gain access to sensitive information or systems.
+
+Stages of a Social Engineering Attack
+1. Preparation – The attacker gathers information on the target.
+2. Establishing Trust – The attacker builds credibility, often using persuasion tactics.
+3. Exploitation – The attacker manipulates the target into taking an action (e.g., clicking a link, providing credentials).
+4. Disengagement – The attacker disconnects after achieving their goal.
+5. Common Social Engineering Tactics
+
+-
+1. Baiting
+Relies on temptation to trick victims into compromising security.
+Example: USB Baiting – An infected USB drive is left in a public place, hoping someone will plug it into their device.
+2. Phishing
+Uses digital communication (email, SMS, or fake websites) to steal sensitive data or deploy malware.
+Phishing kits make attacks easy to launch, even for non-technical criminals.
+Common phishing techniques:
+ Malicious Attachments – Files that infect devices when opened.
+ Fake Data Collection Forms – Websites that steal login credentials.
+ Fraudulent Web Links – Direct users to malicious sites.
+  Variants of Phishing:
+  - Smishing – Uses SMS messages to impersonate legitimate sources.
+  - Vishing – Uses voice calls to manipulate victims.
+3. Quid Pro Quo
+Involves offering a reward in exchange for sensitive information.
+Example: An attacker pretends to be a bank representative offering lower interest rates but asks for account details.
+4. Tailgating (Piggybacking)
+Occurs when an unauthorized person follows an authorized individual into a restricted area.
+5. Watering Hole Attacks
+Attackers infect a frequently visited website to target specific users.
+Example: The Holy Water attack (2020) compromised religious and charity websites.
+-
+Preventing Social Engineering Attacks
+1. Phishing Prevention
+ Implement anti-phishing policies in the workplace.
+ Provide employee training to recognize phishing attempts.
+ Use email access lists to filter suspicious messages.
+ Deploy intrusion prevention and detection systems.
+2. General Social Engineering Prevention
+ Managerial controls to enforce security policies.
+ Stay informed about new social engineering tactics.
+ Encourage information sharing among employees to report threats.
+
+-
+Malware
+Malware (malicious software) is designed to harm devices, networks, or users. 
+It can spread physically (USB drives) or over networks and often operates without user permission or recognition.
+
+Common Types of Malware
+
+Virus
+ Malicious code that interferes with computer operations, damaging data and software.
+ Hides inside trusted applications and spreads when executed.
+ Requires user activation to start the infection.
+Worm
+ Self-replicating malware that spreads across systems without user action.
+ Uses an infected device to scan and spread through networks.
+Trojan
+ Malware disguised as a legitimate file or program.
+ Often used to install additional threats like ransomware.
+Ransomware
+ Encrypts an organization's data and demands payment for decryption.
+Spyware
+ Gathers and sells user information without consent.
+ Often hidden in bundleware (additional software installed with legitimate applications).
 
 
-social engineering
-malware
-web based exploit
-threat model process
+Fileless Malware
+ Uses legitimate programs already on the system to infect devices.
+ Runs in memory instead of storing files on disk, making it harder to detect.
+Rootkits
+ Grants attackers remote administrative control over a system.
+ Delivered using:
+ Dropper – A hidden malware file that installs the malicious code.
+ Loader – Fetches additional malware from external sources.
+Botnet
+ A network of compromised devices ("bots") controlled remotely by a bot-herder.
+ Used for large-scale cyberattacks, such as DDoS (Distributed Denial of Service).
+Cryptojacking
+ Secretly hijacks devices to mine cryptocurrency.
+ Symptoms include system slowdown, high CPU usage, increased electricity costs, and crashes.
 
-social engineering: lead to people forgoing polices, standards and procedures of processes with manipulation
-prepare: gather
-information
-establish trust
-Persuasion tactics: sometimes using vocabulary that makes them sound like a member
-Disconnect from the target
+-
+Potentially Unwanted Applications (PUAs)
+PUAs are software that may not be outright malicious but can negatively impact system performance, security, or user privacy. They are often bundled with legitimate software or disguised as helpful tools.
 
-prevention:
-implementing managerail controls
-staying informed of trends
-share information 
-
-
-These are common types of social engineering to watch out for:
-
-Baiting is a social engineering tactic that tempts people into compromising their security. A common example is USB baiting that relies on someone finding an infected USB drive and plugging it into their device.
-
-Phishing is the use of digital communications to trick people into revealing sensitive data or deploying malicious software. It is one of the most common forms of social engineering, typically performed via email.
-
-Quid pro quo is a type of baiting used to trick someone into believing that they’ll be rewarded in return for sharing access, information, or money. For example, an attacker might impersonate a loan officer at a bank and call customers offering them a lower interest rate on their credit card. They'll tell the customers that they simply need to provide their account details to claim the deal.
-
-Tailgating is a social engineering tactic in which unauthorized people follow an authorized person into a restricted area. This technique is also sometimes referred to as piggybacking.
-
-Watering hole is a type of attack when a threat actor compromises a website frequently visited by a specific group of users. Oftentimes, these watering hole sites are infected with malicious software. An example is the Holy Water attack of 2020 that infected various religious, charity, and volunteer websites
-
-doing the most amount of damage with the least amount of effort
-phising
-phising kit to easily launch without technical skills 
-
-malicious attachment
-fake adata collection forms
-fraudulent web links
-
-smishing: impersonating
-vishing: impersonate via voice
+Adware
+ Displays intrusive advertisements, usually bundled with freeware.
+ Can slow down devices or install additional unwanted software.
+ Monetized by showing ads, often benefiting attackers rather than developers.
+Scareware
+ Uses fake security warnings to trick users into installing malware.
+ Commonly spread via email spam or pop-ups.
+ Can lead to the installation of more severe malware like trojans or ransomware.
+Spyware (Sometimes Considered a PUA)
+ Secretly collects user data and sends it to third parties.
+ Often hidden in bundleware (software packages with unwanted extras).
+-
+Prevention:
+Intrusion Detection Systems (IDS)
+Malware-blocking browser extensions
+Monitoring CPU usage
 
 
-phising prevention
-anti phising polices
-employee training
-email access list
-intrusion prevention detection
-
-
-
-
-
-
-
-
+-
+Web based scripting (cross site scripting)
 
 
 
