@@ -539,9 +539,22 @@ Monitoring CPU usage
 
 -
 Web based scripting (cross site scripting)
+malicious code or behavior used to take advantage of coding flaws in a web application
+Since web application interact with multiple users attackers use injectiion attacks to and these websites and gain access to the user
+ often this injection code is used to blend into the background
+ this is easy as web applications are open to received data
 
-
-
+XSS (Cross-site scripting)
+ijnection attacj that inserts code into a vulnerable website or web app
+exploiting HTML and Javascript giving access to cyber criminals everything that loads on a web page
+ such as session cookies, geolocation, web cams and microphones
+ 1. Reflected: script is hidden and sent to the server and activated during the servers response
+   
+ 2. Stored: it is injected directly onto the server via elements
+  injected elements (photo) activate the malicious code when users visit the infected site
+ 3. DOM (Document object Module): script is written into the source code of the website
+   attacks don't need to be sent to the server to active
+> steal sensitive information
 
 
 
