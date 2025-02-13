@@ -545,7 +545,7 @@ Since web application interact with multiple users attackers use injectiion atta
  this is easy as web applications are open to received data
 
 XSS (Cross-site scripting)
-ijnection attacj that inserts code into a vulnerable website or web app
+Injection attack that inserts code into a vulnerable website or web app
 exploiting HTML and Javascript giving access to cyber criminals everything that loads on a web page
  such as session cookies, geolocation, web cams and microphones
  1. Reflected: script is hidden and sent to the server and activated during the servers response
@@ -558,9 +558,45 @@ exploiting HTML and Javascript giving access to cyber criminals everything that 
 
 
 
+SQL injection categories
+There are three main categories of SQL injection: 
+Inband: data is extracted using the same channel that is used to inject the SQL code. This is the most straightforward attack, in which the retrieved data is presented directly in the application web page.
+Out-of-band: data is retrieved using a different channel (An attacker sends a malicious query that makes the target website connect to a separate server they control.).
+Inferential or Blind: there is no actual transfer of data. Still, the tester can reconstruct the information by sending particular requests and observing the resulting behavior of the DB Server.
 
 
+how to prevent
+Prepared statements: pre writing SQL queries with placeholders so user input is treated as data not code
+Input Sanitization: Cleaning user input by removing characters or patterns that could be dangerous.
+Input Validation: checking that the input matches expected patterns (email should be email@domain.com)
+-
+Threat Modeling:
+1. define the scope
+2. identify threat (threat actors)
+  attack tree maps threat to assets
+3. Characterize the enviroment
+  apply a hacker mindeset
+4. Analyze threats
+5. Mitigate Risk
+6. Evaluate Findings
 
+Process for Attack Simulation and Threat Analysis (PASTA)
+ threat modeling framework
+1. Define business and security objectives 
+   Identify what needs protection and why
+2. Define the technical scope
+   Understand the application environment
+3. Decompose the application
+   How the application handles data and which controls are in place
+4. Perform a threat analysis
+   Attacker mindset: identify potential threats and attack paths
+5. Perform a vulnerability analysis
+   Vulnerability Analysis	Check for weaknesses in the system
+6. Conduct attack modeling
+   Attack tree to map out how threats can be executed
+7. Analyze risk and impact
+   Assess the likelihood and impact of threats to prioritize and manage risk.
+> Make informed security decisions to reduce the most critical risks.
 
 
 
