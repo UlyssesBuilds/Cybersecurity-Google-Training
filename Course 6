@@ -80,23 +80,46 @@ types of documentation: playbooks, incdent handler jounals, policies, plans
 no indsutry standard for documentation, tailored to needs and legal requirements
 
 effective documentation reduces confusion. not easily misunderstood
-Ticket systems can be used to document too
+Ticket systems can be used to document too (ex: Jira)
 -
 IDS / IPS
 IDS monitors systems and network activity for abnormal activities
 IPS same capabilities of IDS but can take action
   Snort, zeek, kismet, sagan, suricata
 
-Alert notification go to SIEM
+Detection categories
+As a security analyst, you will investigate alerts that an IDS generates. There are four types of detection categories you should be familiar with:
+
+A true positive is an alert that correctly detects the presence of an attack.
+A true negative is a state where there is no detection of malicious activity. This is when no malicious activity exists and no alert is triggered. 
+A false positive is an alert that incorrectly detects the presence of a threat. This is when an IDS identifies an activity as malicious, but it isn't. False positives are an inconvenience for security teams because they spend time and resources investigating an illegitimate alert. 
+A false negative is a state where the presence of a threat is not detected. This is when malicious activity happens but an IDS fails to detect it. False negatives are dangerous because security teams are left unaware of legitimate attacks that they can be vulnerable to. 
 
 
+Endpoint detection and response (EDR) is an application that monitors an endpoint for malicious activity. EDR tools are installed on endpoints. 
+Remember that an endpoint is any device connected on a network. Examples include end-user devices, like computers, phones, tablets, and more.
+
+EDRs collect endpoint activity data and perform behavioral analysis to identify threat patterns happening on an endpoint. Behavioral analysis uses the power of machine learning and artificial intelligence to analyze system behavior to identify malicious or unusual activity. EDR tools also use automation to stop attacks without the manual intervention of security professionals. 
+For example, if an EDR detects an unusual process starting up on a user’s workstation that normally is not used, it can automatically block the process from running.
 
 
+log data on SIEM
+1. collect and aggregate raw data from logs
+2. normalize data, removes nonessential attributes, creating consistency and log levels
+3. Analyzed via configured rule sets 
+
+April 3 11:01:21 server sshd[1088]: Failed password for user nuhara from 218.124.14.105 port 5023
+In a parsed format, the fields and values are extracted and paired making them easier to read and interpret:
+host = server
+process = sshd
+source_user = nuhara
+source ip = 218.124.14.105
+source port = 5023
 
 
-
-
-
+SOAR (Security Orchestration, Automation, and Response)
+Collection of applications, tools, workflows that automate analysis and response to security events.
+Track response to security events and incidents
 
 
 
