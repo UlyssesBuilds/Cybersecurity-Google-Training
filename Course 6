@@ -63,6 +63,65 @@ Threat hunters: Threat hunters are typically L3s who work to detect, analyze, an
 -
 Incident response plans
 
+incident response procedures
+System Information: network diagram and data flow diagram
+Other docs: Contact list, forms, etc
+> regularly reviewed and inspected and exercise
+
+-
+Incident response tools
+Tools that Monitor events
+Documentation tools to collect and compile evidence
+
+-
+Incident's handlers jounral documents the 5W's of an incident
+
+types of documentation: playbooks, incdent handler jounals, policies, plans
+no indsutry standard for documentation, tailored to needs and legal requirements
+
+effective documentation reduces confusion. not easily misunderstood
+Ticket systems can be used to document too
+-
+IDS / IPS
+IDS monitors systems and network activity for abnormal activities
+IPS same capabilities of IDS but can take action
+  Snort, zeek, kismet, sagan, suricata
+
+Alert notification go to SIEM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
