@@ -8,8 +8,15 @@ Processes and procedurs
 Interpret logs and alert
 
 
-NIST CSF
+NIST CSF 5 core functions
 identify, protect, detect, respond, and recover
+
+NIST incident response framework
+Preperation
+Detection
+Containment Eradication and Recovery
+Post Incident Activity
+
 
 All security incidents are an event but not all events are a security incident
 Event: observable occurance on a network, system, or device
@@ -120,6 +127,99 @@ source port = 5023
 SOAR (Security Orchestration, Automation, and Response)
 Collection of applications, tools, workflows that automate analysis and response to security events.
 Track response to security events and incidents
+-
+Understand Network Traffic
+
+Clearly summarize what you need to say
+Working with an open mindset
+-
+Data is sent all over the world sometimes it might get saved in unsafe places
+
+network traffic
+network data
+> how do you know what is normal traffic in network traffic if there is so much
+    Create a baseline
+
+IOC (Indicators of Compromise) observable evidence that suggest signs of a potential security incident
+Data exfiltration: unauthorized transmission of data from a syste,
+
+Monitoring network:
+Baseline
+Flow analysis: monitor the movement of packets which have detailed headers. 
+  (C2) Command and Control: maintain communication with compromised systems such as compromised port
+packet payload information is often encrypted within the packet but can be an indiicator if sensitive data is transmitting outside the newtork
+
+
+security operations centers (SOC) and their role in monitoring systems against security threats and attacks
+SOC is focused on maintaining the security of an organization through detection and response
+
+network operations center (NOC), which is an organizational unit that monitors the performance of a network and responds to any network disruption, such as a network outage.
+NOC is responsible for maintaining network performance, availability, and uptime
+
+-
+Data exfiltration: 
+Attacker finds away into the system 
+Lateral movement and pivoting to maintain being detected and enumerate
+> Once they find data they want to have they can reduce the size and then exfiltrate / bring out the data 
+
+Defense:
+Prevent attacker access
+Monitor network activity
+Protect Assets
+Detect and stop the exfilitration
+  large internal file transfers, large external uploads, unexpected file writes
+
+-
+packet and packet capture
+
+Header: protocol, source, destination
+Payload: actual data
+Footer: end (most protocols don't use)
+
+(P-Cap) Packet Capture: intercepted packets
+To do this you must turn your NIC into monitor mode as it currently only listens to its own network
+
+
+
+Libpcap is a packet capture library designed to be used by Unix-like systems, like Linux and MacOS®. Tools like tcpdump use Libpcap as the default packet capture file format. 
+WinPcap is an open-source packet capture library designed for devices running Windows operating systems. It’s considered an older file format and isn’t predominantly used.
+Npcap is a library designed by the port scanning tool Nmap that is commonly used in Windows operating systems.
+PCAPng is a modern file format that can simultaneously capture packets and store data. Its ability to do both explains the “ng,” which stands for “next generation.”
+
+Filter as there is a lot of packets
+
+IP header: 
+ipv4 and ipv6 headers are different
+
+tcpdump command on cli can include flags to filter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
