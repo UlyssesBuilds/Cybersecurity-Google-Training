@@ -193,27 +193,71 @@ ipv4 and ipv6 headers are different
 
 tcpdump command on cli can include flags to filter
 
+-
+Detection and analysis
 
+Analyzing alerts: investigation and evaluation to detrmine if an incdident has occured
 
+Challenge to detect everything is its impossible to detect everything
+high volume of alerts, can be by misconfigured alerts (too broad)
+too narrow and you might miss 
 
+Threat hunting: human driven detection tools to uncover malicious activity not causght by automationj tools
+  fileless malware
 
+threat intelligence, which is evidence-based threat information that provides context about existing or emerging threats. 
+Industry reports: reports on attacker tactics, techniques and procedures
+Government advisories
+Threat data feed
+> Threat intelligence platforms aggregate this data
 
+cyber deception
+deliberately deceiving malicous actors to increase detection and improving defensive strategies
+  Honeypot: systems or resources that are created as decoys vulnerable to attacks with the purpose of attracting potential intruders.
+  > File label "credit card information" will alert security teams once this is tried to be accessed
 
+-
+Indicators of compromise (IoCs) are observable evidence that suggests signs of a potential security incident.
+Indicators of attack (IoA) are the series of observed events that indicate a real-time incident.
+Essentially, IoCs help to identify the who and what of an attack after it's taken place, while IoAs focus on finding the why and how of an ongoing or unknown attack.
 
+Pyramid of Pain
+captures the relationship between indicators of compromise and the level of difficulty that malicious actors experience when indicators of compromise are blocked by 
+security teams.
 
+By adding context to an IoC—for instance, identifying other artifacts related to the suspicious IP address, such as suspicious network communications or unusual 
+processes—security teams can start to develop a detailed picture of a security incident. 
+This context can help security teams detect security incidents faster and take a more informed approach in their response.
 
+ISACs(nformation Sharing and Analysis Centers)
+Crowdsourcing allows people and organizations from the global cybersecurity community to openly share and access a collection
+of threat intelligence data, which helps to continuously improve detection technologies and methodologies. 
 
+Once an organization detects an attack, they can immediately publish the attack details, such as malicious files,
+IP addresses, or URLs, to tools like VirusTotal. This threat intelligence can then help other organizations defend against the same attack.
+-
+Documentation for scaling
+  Transparency
+  Standardization
+  Clarity
+  > maintain and update with changes
 
+-
+Chain of custody
+Documenting evidence possession and control during an incident lifecycle
+Movement of evidence: who, why, and when did someone handle this evidence
+> help meet legal standards for integrity, reliability and accuracy of evidence
 
+Broken chain of custody
 
+-
+Playbooks have checklist allow effective resolution
 
+Playbooks
+non automated
+automated: automate a part of the process of a playbook
 
-
-
-
-
-
-
+> SOAR and SIEM tools can be configured to do this
 
 
 
