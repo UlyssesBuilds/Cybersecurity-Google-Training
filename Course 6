@@ -258,13 +258,30 @@ non automated
 automated: automate a part of the process of a playbook
 
 > SOAR and SIEM tools can be configured to do this
+-
+overlogging
+Knowing what to filter out is necessary
+
+log forwarders
+network log: devices
+system logs: OS
+Application log: software
+Secruity: IDS
+Authentication: login attempts
+
+-
+log formats
+syslog: header (timestamp, host name, application name, message ID)
+  structured (key value pairs)
+  message
+json uses keyvalue pairs
+XML uses tags
+CSV comma seperated info 
+CEF (Common Event Format) key value pair seperated by Pipe |
 
 
-
-
-
-
-
+Which of the following capabilities can syslog be used for?
+standard for logging and transmitting data and can be used as a protocol, service, or log format.
 
 
 
