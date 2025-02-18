@@ -283,10 +283,34 @@ CEF (Common Event Format) key value pair seperated by Pipe |
 Which of the following capabilities can syslog be used for?
 standard for logging and transmitting data and can be used as a protocol, service, or log format.
 
+-
+IDS has different detection methods
+Signature analysis:used to find events of interest. A signature is a pattern that is associated with malicious activity. 
+Signatures can contain specific patterns like a sequence of binary numbers, bytes, or even specific data like an IP address. 
+Advantages
+Low rate of false positives
+Disadvantages
+Signatures can be evaded: Signatures are unique, and attackers can modify their attack behaviors to bypass the signatures. For example, attackers can make slight modifications to malware code to alter its signature and avoid detection
+Signatures require updates: Each time a new exploit or attack is discovered, new signatures must be created and added to the signature database.
+Inability to detect unknown threats: not in the databse such as zero day attacks
+
+Anomaly-based analysis
+train and set expected behavior to find detections away from that
+Advantages
+Ability to detect new and evolving threats:
+Disadvantages
+High rate of false positives:
+Pre-existing compromise: The existence of an attacker during the training phase will include malicious behavior in the baseline
 
 
+HIDS (host-based intrusion detection system) is an application that monitors the activity of the host on which it's installed
+NIDS (network-based intrusion detection system) is an application that collects and monitors network traffic and network data.
 
 
+NIDS rule:
+Action, header, options
+action to take if rule criteria is met (alert, pass, reject)
+header defines signature network traffic (source, destination, and traffic)
 
 
 
